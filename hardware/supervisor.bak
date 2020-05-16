@@ -1,0 +1,47 @@
+EESchema Schematic File Version 4
+LIBS:hardware-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 11
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L appli_connector:ADAFRUIT_FEATHER_BREAKOUT U?
+U 1 1 5EDD4FC6
+P 4400 2750
+F 0 "U?" H 4578 2856 60  0000 L CNN
+F 1 "ADAFRUIT_FEATHER_BREAKOUT" H 4578 2750 60  0000 L CNN
+F 2 "Applidyne_Connector:ADAFRUIT_FEATHER" H 4400 1850 60  0001 C CNN
+F 3 "https://www.adafruit.com/feather" H 4578 2644 60  0000 L CNN
+	1    4400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L appli_connector:ADAFRUIT_FEATHER_BREAKOUT U?
+U 2 1 5EDD55A5
+P 4400 4350
+F 0 "U?" H 4578 4456 60  0000 L CNN
+F 1 "ADAFRUIT_FEATHER_BREAKOUT" H 4578 4350 60  0000 L CNN
+F 2 "Applidyne_Connector:ADAFRUIT_FEATHER" H 4400 3450 60  0001 C CNN
+F 3 "https://www.adafruit.com/feather" H 4578 4244 60  0000 L CNN
+	2    4400 4350
+	1    0    0    -1  
+$EndComp
+Text HLabel 2700 3950 0    50   Output ~ 0
+SCL
+Text HLabel 2700 4050 0    50   BiDi ~ 0
+SDA
+Text HLabel 2700 4200 0    50   Output ~ 0
+~RESET
+Text HLabel 2700 4300 0    50   Input ~ 0
+INT
+$EndSCHEMATC
