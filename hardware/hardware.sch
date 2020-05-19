@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 20
+Sheet 1 21
 Title ""
 Date ""
 Rev ""
@@ -18,7 +18,7 @@ Text Notes 11050 1000 0    118  ~ 24
 DEVICES UNDER TEST
 Text Notes 9050 1100 0    118  ~ 24
 UART PATH\nSELECTION
-Text Notes 1550 1000 0    118  ~ 24
+Text Notes 1150 1000 0    118  ~ 24
 USB HOST
 Text Notes 6800 1100 0    118  ~ 24
 USB-UART\nADAPTORS
@@ -191,14 +191,6 @@ F 3 "" H 4650 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 5800 3600 5800
-Wire Wire Line
-	3750 5700 3600 5700
-Wire Wire Line
-	3750 5600 3600 5600
-Wire Wire Line
-	3750 5500 3600 5500
-Wire Wire Line
 	3750 4400 3600 4400
 Wire Wire Line
 	3600 4400 3600 4300
@@ -210,89 +202,89 @@ Connection ~ 3600 4300
 $Comp
 L appli_capacitor:100n_X7R_1608M C?
 U 1 1 5EE843AA
-P 3200 4350
-F 0 "C?" H 3278 4285 50  0000 L CNN
-F 1 "100n_X7R_1608M" H 3278 4205 35  0000 L CNN
-F 2 "CAPC1608*" V 3315 4250 20  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 3340 4250 20  0001 C CNN
-F 4 "KEMET" V 3390 4250 20  0001 C CNN "manf"
-F 5 "C0603C104K5RACAUTO" V 3415 4250 20  0001 C CNN "manf#"
-F 6 "Element14" V 3440 4250 20  0001 C CNN "Supplier"
-F 7 "2070398" V 3465 4250 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/kemet/c0603c104k5racauto/cap-mlcc-x7r-100nf-50v-0603/dp/2070398" V 3490 4250 20  0001 C CNN "Supplier URL"
-F 9 "0.011" V 3515 4250 20  0001 C CNN "Supplier Price"
-F 10 "1" V 3540 4250 20  0001 C CNN "Supplier Price Break"
-	1    3200 4350
+P 3000 4150
+F 0 "C?" H 3078 4085 50  0000 L CNN
+F 1 "100n_X7R_1608M" H 3078 4005 35  0000 L CNN
+F 2 "CAPC1608*" V 3115 4050 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 3140 4050 20  0001 C CNN
+F 4 "KEMET" V 3190 4050 20  0001 C CNN "manf"
+F 5 "C0603C104K5RACAUTO" V 3215 4050 20  0001 C CNN "manf#"
+F 6 "Element14" V 3240 4050 20  0001 C CNN "Supplier"
+F 7 "2070398" V 3265 4050 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/kemet/c0603c104k5racauto/cap-mlcc-x7r-100nf-50v-0603/dp/2070398" V 3290 4050 20  0001 C CNN "Supplier URL"
+F 9 "0.011" V 3315 4050 20  0001 C CNN "Supplier Price"
+F 10 "1" V 3340 4050 20  0001 C CNN "Supplier Price Break"
+	1    3000 4150
 	1    0    0    -1  
 $EndComp
 $Comp
 L appli_capacitor:100n_X7R_1608M C?
 U 1 1 5EE8527D
-P 2950 4550
-F 0 "C?" H 2872 4415 50  0000 R CNN
-F 1 "100n_X7R_1608M" H 2872 4495 35  0000 R CNN
-F 2 "CAPC1608*" V 3065 4450 20  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 3090 4450 20  0001 C CNN
-F 4 "KEMET" V 3140 4450 20  0001 C CNN "manf"
-F 5 "C0603C104K5RACAUTO" V 3165 4450 20  0001 C CNN "manf#"
-F 6 "Element14" V 3190 4450 20  0001 C CNN "Supplier"
-F 7 "2070398" V 3215 4450 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/kemet/c0603c104k5racauto/cap-mlcc-x7r-100nf-50v-0603/dp/2070398" V 3240 4450 20  0001 C CNN "Supplier URL"
-F 9 "0.011" V 3265 4450 20  0001 C CNN "Supplier Price"
-F 10 "1" V 3290 4450 20  0001 C CNN "Supplier Price Break"
-	1    2950 4550
+P 2750 4350
+F 0 "C?" H 2672 4215 50  0000 R CNN
+F 1 "100n_X7R_1608M" H 2672 4295 35  0000 R CNN
+F 2 "CAPC1608*" V 2865 4250 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 2890 4250 20  0001 C CNN
+F 4 "KEMET" V 2940 4250 20  0001 C CNN "manf"
+F 5 "C0603C104K5RACAUTO" V 2965 4250 20  0001 C CNN "manf#"
+F 6 "Element14" V 2990 4250 20  0001 C CNN "Supplier"
+F 7 "2070398" V 3015 4250 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/kemet/c0603c104k5racauto/cap-mlcc-x7r-100nf-50v-0603/dp/2070398" V 3040 4250 20  0001 C CNN "Supplier URL"
+F 9 "0.011" V 3065 4250 20  0001 C CNN "Supplier Price"
+F 10 "1" V 3090 4250 20  0001 C CNN "Supplier Price Break"
+	1    2750 4350
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	3200 4350 3200 4250
+	3000 4150 3000 4050
 Wire Wire Line
-	2950 4350 2950 4250
+	2750 4150 2750 4050
 Wire Wire Line
-	2950 4550 2950 4650
+	2750 4350 2750 4450
 Wire Wire Line
-	3200 4550 3200 4650
+	3000 4350 3000 4450
 $Comp
 L appli_power:GND #PWR?
 U 1 1 5EEABEE0
-P 2950 4650
-F 0 "#PWR?" H 2950 4400 50  0001 C CNN
-F 1 "GND" H 2955 4477 50  0000 C CNN
-F 2 "" H 2950 4650 50  0001 C CNN
-F 3 "" H 2950 4650 50  0001 C CNN
-	1    2950 4650
+P 2750 4450
+F 0 "#PWR?" H 2750 4200 50  0001 C CNN
+F 1 "GND" H 2755 4277 50  0000 C CNN
+F 2 "" H 2750 4450 50  0001 C CNN
+F 3 "" H 2750 4450 50  0001 C CNN
+	1    2750 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L appli_power:GND #PWR?
 U 1 1 5EEAC041
-P 3200 4650
-F 0 "#PWR?" H 3200 4400 50  0001 C CNN
-F 1 "GND" H 3205 4477 50  0000 C CNN
-F 2 "" H 3200 4650 50  0001 C CNN
-F 3 "" H 3200 4650 50  0001 C CNN
-	1    3200 4650
+P 3000 4450
+F 0 "#PWR?" H 3000 4200 50  0001 C CNN
+F 1 "GND" H 3005 4277 50  0000 C CNN
+F 2 "" H 3000 4450 50  0001 C CNN
+F 3 "" H 3000 4450 50  0001 C CNN
+	1    3000 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L appli_power:+3.3V #PWR?
 U 1 1 5EEB10DB
-P 2950 4250
-F 0 "#PWR?" H 2950 4100 50  0001 C CNN
-F 1 "+3.3V" H 2965 4423 50  0000 C CNN
-F 2 "" H 2950 4250 50  0001 C CNN
-F 3 "" H 2950 4250 50  0001 C CNN
-	1    2950 4250
+P 2750 4050
+F 0 "#PWR?" H 2750 3900 50  0001 C CNN
+F 1 "+3.3V" H 2765 4223 50  0000 C CNN
+F 2 "" H 2750 4050 50  0001 C CNN
+F 3 "" H 2750 4050 50  0001 C CNN
+	1    2750 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L appli_power:+3.3V #PWR?
 U 1 1 5EEB1690
-P 3200 4250
-F 0 "#PWR?" H 3200 4100 50  0001 C CNN
-F 1 "+3.3V" H 3215 4423 50  0000 C CNN
-F 2 "" H 3200 4250 50  0001 C CNN
-F 3 "" H 3200 4250 50  0001 C CNN
-	1    3200 4250
+P 3000 4050
+F 0 "#PWR?" H 3000 3900 50  0001 C CNN
+F 1 "+3.3V" H 3015 4223 50  0000 C CNN
+F 2 "" H 3000 4050 50  0001 C CNN
+F 3 "" H 3000 4050 50  0001 C CNN
+	1    3000 4050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -659,9 +651,7 @@ Text Notes 11050 2450 0    98   ~ 20
 Text Notes 11050 1450 0    98   ~ 20
 0
 Wire Wire Line
-	12900 8750 12900 9300
-Wire Wire Line
-	12900 9300 10850 9300
+	12900 8750 12900 9350
 Connection ~ 12900 8750
 Text Notes 13800 1100 0    118  ~ 24
 STIMULUS\n& OUTPUT
@@ -1020,14 +1010,14 @@ Wire Wire Line
 Wire Wire Line
 	10250 6150 9950 6150
 $Sheet
-S -2650 11900 2500 1600
+S 1900 9900 2500 1100
 U 5EDD185B
 F0 "Management Microcontroller" 50
 F1 "supervisor.sch" 50
-F2 "SCL" O R -150 12150 50 
-F3 "SDA" B R -150 12250 50 
-F4 "~RESET" O R -150 12350 50 
-F5 "INT" I R -150 12450 50 
+F2 "SCL" O R 4400 10150 50 
+F3 "SDA" B R 4400 10250 50 
+F4 "~RESET" O R 4400 10350 50 
+F5 "INT" I R 4400 10450 50 
 $EndSheet
 Text Notes 14000 8700 0    50   ~ 0
 Address: 
@@ -1035,7 +1025,7 @@ Text Notes 14000 6450 0    50   ~ 0
 Address: 
 Text Notes 13950 3550 0    50   ~ 0
 Address: 
-Text Notes -1950 11500 0    118  ~ 24
+Text Notes 2000 9700 0    118  ~ 24
 SUPERVISOR MICRO\n& USER STATUS/BTN
 Text Label 10000 5950 0    50   ~ 0
 SCL
@@ -1137,17 +1127,17 @@ Wire Wire Line
 Wire Wire Line
 	8150 4950 8150 4700
 Text Notes 8100 1450 0    98   ~ 20
-0
+A
 Text Notes 8100 2500 0    98   ~ 20
-1
+B
 Text Notes 8100 3450 0    98   ~ 20
-2
+C
 Text Notes 8100 4500 0    98   ~ 20
-3
+D
 Text Notes 4200 3700 0    118  ~ 24
 USB MUX
 Text Notes 8100 5900 0    98   ~ 20
-4
+E
 Wire Wire Line
 	8150 5600 8150 5050
 Wire Wire Line
@@ -1167,10 +1157,6 @@ F4 "SERIAL_D-" I L 6550 4600 50
 F5 "SERIAL_TX" O R 8050 4600 50 
 F6 "SERIAL_RX" I R 8050 4700 50 
 $EndSheet
-Wire Wire Line
-	3750 5000 3300 5000
-Wire Wire Line
-	3750 5100 3300 5100
 Wire Wire Line
 	5550 5800 5650 5800
 Wire Wire Line
@@ -1198,8 +1184,6 @@ Wire Wire Line
 	5550 5600 5850 5600
 Wire Wire Line
 	5850 5600 5850 7700
-Wire Wire Line
-	5950 7600 6550 7600
 Wire Wire Line
 	5550 5500 5950 5500
 Wire Wire Line
@@ -1352,123 +1336,305 @@ Wire Wire Line
 Wire Wire Line
 	8850 5750 8950 5750
 Text Notes 8100 6500 0    98   ~ 20
-5
+F
 Text Notes 8100 7500 0    98   ~ 20
-6
+G
 Text Notes 8100 8500 0    98   ~ 20
-7
-Text Notes 3700 1000 0    118  ~ 24
+H
+Text Notes 3450 1000 0    118  ~ 24
 USB HUB
 Wire Wire Line
-	150  12150 -150 12150
+	4700 10150 4400 10150
 Wire Wire Line
-	150  12250 -150 12250
+	4700 10250 4400 10250
 Wire Wire Line
-	150  12350 -150 12350
-Text Label -100 12150 0    50   ~ 0
+	4700 10350 4400 10350
+Text Label 4450 10150 0    50   ~ 0
 SCL
-Text Label -100 12250 0    50   ~ 0
+Text Label 4450 10250 0    50   ~ 0
 SDA
-Text Label -100 12350 0    50   ~ 0
+Text Label 4450 10350 0    50   ~ 0
 ~RESET
-Text Label -100 12450 0    50   ~ 0
+Text Label 4450 10450 0    50   ~ 0
 INT
 Wire Wire Line
-	150  12450 -150 12450
+	4700 10450 4400 10450
 Entry Wire Line
-	150  12150 250  12250
+	4700 10450 4800 10350
 Entry Wire Line
-	150  12250 250  12350
+	4700 10350 4800 10250
 Entry Wire Line
-	150  12350 250  12450
+	4700 10250 4800 10150
 Entry Wire Line
-	150  12450 250  12550
+	4700 10150 4800 10050
 Wire Bus Line
-	15900 9400 10350 9400
-Wire Bus Line
-	250  12650 350  12650
+	15900 9200 10350 9200
 $Sheet
-S 1200 1450 1100 700 
+S 800  1450 1100 700 
 U 608FAF92
 F0 "USB Connector & ESD" 50
 F1 "usb_input.sch" 50
-F2 "USB_D+" B R 2300 1850 50 
-F3 "USB_D-" B R 2300 1750 50 
 $EndSheet
-Wire Wire Line
-	2300 1750 2600 1750
-Wire Wire Line
-	2300 1850 2600 1850
 $Comp
 L appli_special:MCP23008-E_SS U?
 U 1 1 609F6449
-P 3900 7900
-F 0 "U?" H 3900 8837 60  0000 C CNN
-F 1 "MCP23008-E_SS" H 3900 8731 60  0000 C CNN
-F 2 "" H 3800 7800 60  0000 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf" H 3900 7075 60  0001 C CNN
-F 4 "Microchip" H 3900 6835 60  0001 C CNN "manf"
-F 5 "MCP23008-E/SS" H 3910 6725 60  0001 C CNN "manf#"
-F 6 "RS Online" H 3900 6615 60  0001 C CNN "Supplier"
-F 7 "770-9707" H 3900 6505 60  0001 C CNN "Supplier Part No"
-F 8 "http://au.rs-online.com/web/p/i-o-expanders/7709707/" H 3900 6405 60  0001 C CNN "Supplier URL"
-F 9 "1.566" H 3900 6285 60  0001 C CNN "Supplier Price"
-F 10 "5" H 3910 6175 60  0001 C CNN "Supplier Price Break"
-	1    3900 7900
+P 3900 8100
+F 0 "U?" H 3900 9037 60  0000 C CNN
+F 1 "MCP23008-E_SS" H 3900 8931 60  0000 C CNN
+F 2 "" H 3800 8000 60  0000 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf" H 3900 7275 60  0001 C CNN
+F 4 "Microchip" H 3900 7035 60  0001 C CNN "manf"
+F 5 "MCP23008-E/SS" H 3910 6925 60  0001 C CNN "manf#"
+F 6 "RS Online" H 3900 6815 60  0001 C CNN "Supplier"
+F 7 "770-9707" H 3900 6705 60  0001 C CNN "Supplier Part No"
+F 8 "http://au.rs-online.com/web/p/i-o-expanders/7709707/" H 3900 6605 60  0001 C CNN "Supplier URL"
+F 9 "1.566" H 3900 6485 60  0001 C CNN "Supplier Price"
+F 10 "5" H 3910 6375 60  0001 C CNN "Supplier Price Break"
+	1    3900 8100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 7300 2950 7300
+	3050 7500 2950 7500
 Wire Wire Line
-	2950 7300 2950 7200
+	2950 7500 2950 7400
 $Comp
 L appli_power:+3.3V #PWR?
 U 1 1 609F6459
-P 2950 7200
-F 0 "#PWR?" H 2950 7050 50  0001 C CNN
-F 1 "+3.3V" H 2965 7373 50  0000 C CNN
-F 2 "" H 2950 7200 50  0001 C CNN
-F 3 "" H 2950 7200 50  0001 C CNN
-	1    2950 7200
+P 2950 7400
+F 0 "#PWR?" H 2950 7250 50  0001 C CNN
+F 1 "+3.3V" H 2965 7573 50  0000 C CNN
+F 2 "" H 2950 7400 50  0001 C CNN
+F 3 "" H 2950 7400 50  0001 C CNN
+	1    2950 7400
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 8500 2950 8500
+	3050 8700 2950 8700
 Wire Wire Line
-	2950 8500 2950 8600
+	2950 8700 2950 8800
 $Comp
 L appli_power:GND #PWR?
 U 1 1 609F6461
-P 2950 8600
-F 0 "#PWR?" H 2950 8350 50  0001 C CNN
-F 1 "GND" H 2955 8427 50  0000 C CNN
-F 2 "" H 2950 8600 50  0001 C CNN
-F 3 "" H 2950 8600 50  0001 C CNN
-	1    2950 8600
+P 2950 8800
+F 0 "#PWR?" H 2950 8550 50  0001 C CNN
+F 1 "GND" H 2955 8627 50  0000 C CNN
+F 2 "" H 2950 8800 50  0001 C CNN
+F 3 "" H 2950 8800 50  0001 C CNN
+	1    2950 8800
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 7500 2350 7500
+	3050 7700 2700 7700
 Wire Wire Line
-	3050 7600 2350 7600
+	3050 7800 2700 7800
 Wire Wire Line
-	3050 8200 2350 8200
+	3050 8400 2700 8400
 Wire Wire Line
-	3050 8300 2350 8300
-Text Label 2850 7500 2    50   ~ 0
+	3050 8500 2700 8500
+Text Label 2950 7700 2    50   ~ 0
 SCL
-Text Label 2850 7600 2    50   ~ 0
+Text Label 2950 7800 2    50   ~ 0
 SDA
-Text Label 2850 8200 2    50   ~ 0
+Text Label 2950 8400 2    50   ~ 0
 ~RESET
-Text Label 2850 8300 2    50   ~ 0
+Text Label 2950 8500 2    50   ~ 0
 INT
-Text Notes 4150 8850 2    50   ~ 0
+Text Notes 4150 9050 2    50   ~ 0
 Address: 
+Connection ~ 10350 9200
+Wire Wire Line
+	4750 7600 5050 7600
+Wire Wire Line
+	5050 7050 3350 7050
+Wire Wire Line
+	3350 7050 3350 5500
+Wire Wire Line
+	3350 5500 3750 5500
+Wire Wire Line
+	3450 5600 3450 6950
+Wire Wire Line
+	3450 6950 5150 6950
+Wire Wire Line
+	5150 7700 4750 7700
+Wire Wire Line
+	3450 5600 3750 5600
+Wire Wire Line
+	4750 7800 5250 7800
+Wire Wire Line
+	5250 6850 3550 6850
+Wire Wire Line
+	3550 6850 3550 5700
+Wire Wire Line
+	3550 5700 3750 5700
+Wire Wire Line
+	3650 5800 3650 6750
+Wire Wire Line
+	3650 6750 5350 6750
+Wire Wire Line
+	5350 7900 4750 7900
+Wire Wire Line
+	3650 5800 3750 5800
+Wire Wire Line
+	5050 7050 5050 7600
+Wire Wire Line
+	5150 6950 5150 7700
+Wire Wire Line
+	5250 6850 5250 7800
+Wire Wire Line
+	5350 6750 5350 7900
+Wire Wire Line
+	4750 8000 6250 8000
+Wire Wire Line
+	6250 8000 6250 6350
+Wire Wire Line
+	6250 6350 6450 6350
+Wire Wire Line
+	6450 6350 6450 5450
+Wire Wire Line
+	6450 5450 6550 5450
+Wire Wire Line
+	4750 8100 6350 8100
+Wire Wire Line
+	6350 8100 6350 6450
+Wire Wire Line
+	6350 6450 6550 6450
+Wire Wire Line
+	5950 7600 6550 7600
+Wire Wire Line
+	4750 8200 6450 8200
+Wire Wire Line
+	6450 8200 6450 7450
+Wire Wire Line
+	6450 7450 6550 7450
+Wire Wire Line
+	4750 8300 6450 8300
+Wire Wire Line
+	6450 8300 6450 8450
+Wire Wire Line
+	6450 8450 6550 8450
+Text Label 4850 7600 0    50   ~ 0
+EN
+Text Label 4850 7700 0    50   ~ 0
+C1
+Text Label 4850 7800 0    50   ~ 0
+C0
+Text Label 4850 7900 0    50   ~ 0
+C2
+Text Label 4850 8300 0    50   ~ 0
+SPWR_7
+Text Label 4850 8200 0    50   ~ 0
+SPWR_6
+Text Label 4850 8100 0    50   ~ 0
+SPWR_5
+Text Label 4850 8000 0    50   ~ 0
+SPWR_4
+Entry Wire Line
+	2700 7700 2600 7800
+Entry Wire Line
+	2700 7800 2600 7900
+Entry Wire Line
+	2700 8400 2600 8500
+Entry Wire Line
+	2700 8500 2600 8600
 Wire Bus Line
-	250  12250 250  12650
+	2600 9200 4800 9200
+Connection ~ 4800 9200
 Wire Bus Line
-	10350 6050 10350 9400
+	4800 9200 10350 9200
+Wire Wire Line
+	4950 9350 4950 10600
+Wire Wire Line
+	4950 10600 4550 10600
+Wire Wire Line
+	4950 9350 12900 9350
+$Comp
+L appli_special:TUSB2046 U?
+U 2 1 5F52C0E1
+P 2450 5300
+F 0 "U?" H 2342 5787 60  0000 C CNN
+F 1 "TUSB2046" H 2342 5681 60  0000 C CNN
+F 2 "Applidyne_QFP:QFN33P50_500X500X100L40X24T345N" H 2450 4050 60  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tusb2046b.pdf" H 2450 4175 60  0001 C CNN
+F 4 "TEXAS INSTRUMENTS" H 2450 3935 60  0001 C CNN "manf"
+F 5 "TUSB2046BIRHBR" H 2460 3825 60  0001 C CNN "manf#"
+F 6 "Mouser" H 2450 3715 60  0001 C CNN "Supplier"
+F 7 "595-TUSB2046BIRHBR" H 2450 3605 60  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Texas-Instruments/TUSB2046BIRHBR?qs=0OHPnBYoB%2Fm43hGx4HiInw%3D%3D" H 2450 3505 60  0001 C CNN "Supplier URL"
+F 9 "5.19" H 2450 3385 60  0001 C CNN "Supplier Price"
+F 10 "10" H 2460 3275 60  0001 C CNN "Supplier Price Break"
+	2    2450 5300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L appli_special:TUSB2046 U?
+U 3 1 5F52D29C
+P 1400 6600
+F 0 "U?" H 1828 6653 60  0000 L CNN
+F 1 "TUSB2046" H 1828 6547 60  0000 L CNN
+F 2 "Applidyne_QFP:QFN33P50_500X500X100L40X24T345N" H 1400 5350 60  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tusb2046b.pdf" H 1400 5475 60  0001 C CNN
+F 4 "TEXAS INSTRUMENTS" H 1400 5235 60  0001 C CNN "manf"
+F 5 "TUSB2046BIRHBR" H 1410 5125 60  0001 C CNN "manf#"
+F 6 "Mouser" H 1400 5015 60  0001 C CNN "Supplier"
+F 7 "595-TUSB2046BIRHBR" H 1400 4905 60  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Texas-Instruments/TUSB2046BIRHBR?qs=0OHPnBYoB%2Fm43hGx4HiInw%3D%3D" H 1400 4805 60  0001 C CNN "Supplier URL"
+F 9 "5.19" H 1400 4685 60  0001 C CNN "Supplier Price"
+F 10 "10" H 1410 4575 60  0001 C CNN "Supplier Price Break"
+	3    1400 6600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L appli_special:TUSB2046 U?
+U 4 1 5F52E0C7
+P 1400 7400
+F 0 "U?" H 1828 7453 60  0000 L CNN
+F 1 "TUSB2046" H 1828 7347 60  0000 L CNN
+F 2 "Applidyne_QFP:QFN33P50_500X500X100L40X24T345N" H 1400 6150 60  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tusb2046b.pdf" H 1400 6275 60  0001 C CNN
+F 4 "TEXAS INSTRUMENTS" H 1400 6035 60  0001 C CNN "manf"
+F 5 "TUSB2046BIRHBR" H 1410 5925 60  0001 C CNN "manf#"
+F 6 "Mouser" H 1400 5815 60  0001 C CNN "Supplier"
+F 7 "595-TUSB2046BIRHBR" H 1400 5705 60  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Texas-Instruments/TUSB2046BIRHBR?qs=0OHPnBYoB%2Fm43hGx4HiInw%3D%3D" H 1400 5605 60  0001 C CNN "Supplier URL"
+F 9 "5.19" H 1400 5485 60  0001 C CNN "Supplier Price"
+F 10 "10" H 1410 5375 60  0001 C CNN "Supplier Price Break"
+	4    1400 7400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L appli_special:TUSB2046 U?
+U 5 1 5F52F7E6
+P 1400 8200
+F 0 "U?" H 1828 8253 60  0000 L CNN
+F 1 "TUSB2046" H 1828 8147 60  0000 L CNN
+F 2 "Applidyne_QFP:QFN33P50_500X500X100L40X24T345N" H 1400 6950 60  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tusb2046b.pdf" H 1400 7075 60  0001 C CNN
+F 4 "TEXAS INSTRUMENTS" H 1400 6835 60  0001 C CNN "manf"
+F 5 "TUSB2046BIRHBR" H 1410 6725 60  0001 C CNN "manf#"
+F 6 "Mouser" H 1400 6615 60  0001 C CNN "Supplier"
+F 7 "595-TUSB2046BIRHBR" H 1400 6505 60  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Texas-Instruments/TUSB2046BIRHBR?qs=0OHPnBYoB%2Fm43hGx4HiInw%3D%3D" H 1400 6405 60  0001 C CNN "Supplier URL"
+F 9 "5.19" H 1400 6285 60  0001 C CNN "Supplier Price"
+F 10 "10" H 1410 6175 60  0001 C CNN "Supplier Price Break"
+	5    1400 8200
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 3050 5500
+NoConn ~ 3050 5400
+Wire Wire Line
+	3050 5100 3750 5100
+Wire Wire Line
+	3050 5200 3200 5200
+Wire Wire Line
+	3200 5200 3200 5000
+Wire Wire Line
+	3200 5000 3750 5000
 Wire Bus Line
-	15900 2350 15900 9400
+	2600 7800 2600 9200
+Wire Bus Line
+	4800 9200 4800 10350
+Wire Bus Line
+	10350 6050 10350 9200
+Wire Bus Line
+	15900 2350 15900 9200
 $EndSCHEMATC

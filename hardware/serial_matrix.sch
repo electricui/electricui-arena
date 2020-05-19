@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 20
+Sheet 2 21
 Title ""
 Date ""
 Rev ""
@@ -837,6 +837,10 @@ Wire Bus Line
 	4150 6250 5350 6250
 Wire Bus Line
 	4150 6650 6200 6650
+Text Notes 2000 3550 0    50   ~ 0
+USB Serial converters\nfeed this side of the matrix
+Text Notes 8650 3600 0    50   ~ 0
+The matrix output supplies the\nserial output to a selected target
 Wire Bus Line
 	4150 5950 4150 6250
 Wire Bus Line
@@ -845,8 +849,4 @@ Wire Bus Line
 	6200 2450 6200 6650
 Wire Bus Line
 	5350 2450 5350 6250
-Text Notes 2000 3550 0    50   ~ 0
-USB Serial converters\nfeed this side of the matrix
-Text Notes 8650 3600 0    50   ~ 0
-The matrix output supplies the\nserial output to a selected target
 $EndSCHEMATC
