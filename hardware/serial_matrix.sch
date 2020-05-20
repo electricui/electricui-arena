@@ -865,21 +865,21 @@ Wire Wire Line
 	3950 6350 4350 6350
 Wire Wire Line
 	3950 6250 4350 6250
-Text Label 4050 6550 0    50   ~ 0
-EXP_I
-Text Label 4050 6450 0    50   ~ 0
-EXP_C
-Text Label 4050 6350 0    50   ~ 0
-EXP_B
-Text Label 4050 6250 0    50   ~ 0
-EXP_A
-Text Label 4050 6150 0    50   ~ 0
-COL_I
-Text Label 4050 6050 0    50   ~ 0
-COL_C
-Text Label 4050 5950 0    50   ~ 0
-COL_B
 Text Label 4050 5850 0    50   ~ 0
+EXP_I
+Text Label 4050 6150 0    50   ~ 0
+EXP_C
+Text Label 4050 6050 0    50   ~ 0
+EXP_B
+Text Label 4050 5950 0    50   ~ 0
+EXP_A
+Text Label 4050 6550 0    50   ~ 0
+COL_I
+Text Label 4050 6250 0    50   ~ 0
+COL_C
+Text Label 4050 6350 0    50   ~ 0
+COL_B
+Text Label 4050 6450 0    50   ~ 0
 COL_A
 Wire Wire Line
 	3950 6150 4350 6150
