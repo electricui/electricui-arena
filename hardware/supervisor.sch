@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L appli_connector:ADAFRUIT_FEATHER_BREAKOUT U?
+L appli_connector:ADAFRUIT_FEATHER_BREAKOUT U29
 U 1 1 5EDD4FC6
 P 4750 3250
-F 0 "U?" H 4928 3356 60  0000 L CNN
+F 0 "U29" H 4928 3356 60  0000 L CNN
 F 1 "ADAFRUIT_FEATHER_BREAKOUT" H 4928 3250 60  0000 L CNN
 F 2 "Applidyne_Connector:ADAFRUIT_FEATHER" H 4750 2350 60  0001 C CNN
 F 3 "https://www.adafruit.com/feather" H 4928 3144 60  0000 L CNN
@@ -26,10 +26,10 @@ F 3 "https://www.adafruit.com/feather" H 4928 3144 60  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L appli_connector:ADAFRUIT_FEATHER_BREAKOUT U?
+L appli_connector:ADAFRUIT_FEATHER_BREAKOUT U29
 U 2 1 5EDD55A5
 P 4750 4850
-F 0 "U?" H 4928 4956 60  0000 L CNN
+F 0 "U29" H 4928 4956 60  0000 L CNN
 F 1 "ADAFRUIT_FEATHER_BREAKOUT" H 4928 4850 60  0000 L CNN
 F 2 "Applidyne_Connector:ADAFRUIT_FEATHER" H 4750 3950 60  0001 C CNN
 F 3 "https://www.adafruit.com/feather" H 4928 4744 60  0000 L CNN
@@ -47,10 +47,10 @@ INT
 Text Notes 2150 4050 0    50   ~ 0
 IO Expanders are use for all\nmanagement IO
 $Comp
-L appli_device:LED_RED_1608M D?
+L appli_device:LED_RED_1608M D9
 U 1 1 607E0E89
 P 8950 2550
-F 0 "D?" H 8950 2305 50  0000 C CNN
+F 0 "D9" H 8950 2305 50  0000 C CNN
 F 1 "LED_RED_1608M" H 8950 2396 50  0000 C CNN
 F 2 "Applidyne_LED:LEDC1608X80L40N" H 8950 2750 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8950 2340 50  0001 C CNN
@@ -65,12 +65,12 @@ F 10 "10" H 8950 1560 60  0001 C CNN "Supplier Price Break"
 	-1   0    0    1   
 $EndComp
 $Comp
-L appli_device:LED_GREEN_1608M D?
+L appli_device:LED_GREEN_1608M D11
 U 1 1 607E24C9
 P 8950 3350
-F 0 "D?" H 8950 3105 50  0000 C CNN
+F 0 "D11" H 8950 3105 50  0000 C CNN
 F 1 "LED_GREEN_1608M" H 8950 3196 50  0000 C CNN
-F 2 "" H 8850 3350 50  0000 C CNN
+F 2 "Applidyne_LED:LEDC1608X80L40N" H 8850 3350 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8950 3140 50  0001 C CNN
 F 4 "DIALIGHT" H 8950 2930 60  0001 C CNN "manf"
 F 5 "5988070107F" H 8950 2840 60  0001 C CNN "manf#"
@@ -83,10 +83,10 @@ F 10 "10" H 8950 2360 60  0001 C CNN "Supplier Price Break"
 	-1   0    0    1   
 $EndComp
 $Comp
-L appli_device:LED_YELLOW_1608M D?
+L appli_device:LED_YELLOW_1608M D10
 U 1 1 607E3948
 P 8950 2950
-F 0 "D?" H 8950 2705 50  0000 C CNN
+F 0 "D10" H 8950 2705 50  0000 C CNN
 F 1 "LED_YELLOW_1608M" H 8950 2796 50  0000 C CNN
 F 2 "Applidyne_LED:LEDC1608X80L40N" H 8950 3150 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8950 2740 50  0001 C CNN
@@ -101,10 +101,10 @@ F 10 "10" H 8950 1960 60  0001 C CNN "Supplier Price Break"
 	-1   0    0    1   
 $EndComp
 $Comp
-L appli_resistor:1K00_1608M R?
+L appli_resistor:1K00_1608M R24
 U 1 1 607E5642
 P 8450 2550
-F 0 "R?" V 8262 2400 50  0000 C CNN
+F 0 "R24" V 8262 2400 50  0000 C CNN
 F 1 "1K00_1608M" V 8342 2400 35  0000 C CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 8560 2400 20  0001 C CNN
 F 3 "" V 8585 2400 20  0001 C CNN
@@ -119,10 +119,10 @@ F 10 "50+" V 8785 2400 20  0001 C CNN "Supplier Price Break"
 	0    1    1    0   
 $EndComp
 $Comp
-L appli_resistor:1K00_1608M R?
+L appli_resistor:1K00_1608M R25
 U 1 1 607E6472
 P 8450 2950
-F 0 "R?" V 8262 2800 50  0000 C CNN
+F 0 "R25" V 8262 2800 50  0000 C CNN
 F 1 "1K00_1608M" V 8342 2800 35  0000 C CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 8560 2800 20  0001 C CNN
 F 3 "" V 8585 2800 20  0001 C CNN
@@ -137,10 +137,10 @@ F 10 "50+" V 8785 2800 20  0001 C CNN "Supplier Price Break"
 	0    1    1    0   
 $EndComp
 $Comp
-L appli_resistor:1K00_1608M R?
+L appli_resistor:1K00_1608M R26
 U 1 1 607E6DE7
 P 8450 3350
-F 0 "R?" V 8262 3200 50  0000 C CNN
+F 0 "R26" V 8262 3200 50  0000 C CNN
 F 1 "1K00_1608M" V 8342 3200 35  0000 C CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 8560 3200 20  0001 C CNN
 F 3 "" V 8585 3200 20  0001 C CNN
@@ -175,10 +175,10 @@ Wire Wire Line
 	9500 3350 9500 3450
 Connection ~ 9500 3350
 $Comp
-L appli_power:GND #PWR?
+L appli_power:GND #PWR0103
 U 1 1 607EB90C
 P 9500 3450
-F 0 "#PWR?" H 9500 3200 50  0001 C CNN
+F 0 "#PWR0103" H 9500 3200 50  0001 C CNN
 F 1 "GND" H 9505 3277 50  0000 C CNN
 F 2 "" H 9500 3450 50  0001 C CNN
 F 3 "" H 9500 3450 50  0001 C CNN
@@ -198,10 +198,10 @@ MICROCONTROLLER
 Text Notes 4050 2200 0    50   ~ 0
 Feather footprint allows for any architecture as host.\nExpect ETHERNET wing attachment additional host comm path.
 $Comp
-L appli_switch:SKPGABE010_SPST_SMD SW?
+L appli_switch:SKPGABE010_SPST_SMD SW1
 U 1 1 607F517A
 P 8850 4900
-F 0 "SW?" H 8850 5232 50  0000 C CNN
+F 0 "SW1" H 8850 5232 50  0000 C CNN
 F 1 "SKPGABE010_SPST_SMD" H 8850 5141 50  0000 C CNN
 F 2 "Applidyne_Switch:SKPGABE010" H 8850 4710 20  0001 C CNN
 F 3 "http://docs-asia.electrocomponents.com/webdocs/14b0/0900766b814b0f5d.pdf" H 8850 4685 20  0001 C CNN
@@ -216,10 +216,10 @@ F 10 "10" H 8850 4485 20  0001 C CNN "Supplier Price Break"
 	1    0    0    -1  
 $EndComp
 $Comp
-L appli_switch:SKPGABE010_SPST_SMD SW?
+L appli_switch:SKPGABE010_SPST_SMD SW2
 U 1 1 607F5959
 P 8850 5500
-F 0 "SW?" H 8850 5832 50  0000 C CNN
+F 0 "SW2" H 8850 5832 50  0000 C CNN
 F 1 "SKPGABE010_SPST_SMD" H 8850 5741 50  0000 C CNN
 F 2 "Applidyne_Switch:SKPGABE010" H 8850 5310 20  0001 C CNN
 F 3 "http://docs-asia.electrocomponents.com/webdocs/14b0/0900766b814b0f5d.pdf" H 8850 5285 20  0001 C CNN
@@ -234,10 +234,10 @@ F 10 "10" H 8850 5085 20  0001 C CNN "Supplier Price Break"
 	1    0    0    -1  
 $EndComp
 $Comp
-L appli_resistor:4K7_1608M R?
+L appli_resistor:4K7_1608M R22
 U 1 1 6118D691
 P 2650 3100
-F 0 "R?" H 2723 2985 50  0000 L CNN
+F 0 "R22" H 2723 2985 50  0000 L CNN
 F 1 "4K7_1608M" H 2723 2905 35  0000 L CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 2760 2950 20  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1788326.pdf" V 2785 2950 20  0001 C CNN
@@ -252,10 +252,10 @@ F 10 "1" V 2985 2950 20  0001 C CNN "Supplier Price Break"
 	1    0    0    -1  
 $EndComp
 $Comp
-L appli_resistor:4K7_1608M R?
+L appli_resistor:4K7_1608M R21
 U 1 1 6118DC40
 P 2400 3400
-F 0 "R?" H 2327 3215 50  0000 R CNN
+F 0 "R21" H 2327 3215 50  0000 R CNN
 F 1 "4K7_1608M" H 2327 3295 35  0000 R CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 2510 3250 20  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1788326.pdf" V 2535 3250 20  0001 C CNN
@@ -272,10 +272,10 @@ $EndComp
 Wire Wire Line
 	2400 3100 2400 3050
 $Comp
-L appli_power:+3.3V #PWR?
+L appli_power:+3.3V #PWR0100
 U 1 1 6118F27F
 P 2400 2950
-F 0 "#PWR?" H 2400 2800 50  0001 C CNN
+F 0 "#PWR0100" H 2400 2800 50  0001 C CNN
 F 1 "+3.3V" H 2415 3123 50  0000 C CNN
 F 2 "" H 2400 2950 50  0001 C CNN
 F 3 "" H 2400 2950 50  0001 C CNN
@@ -297,10 +297,10 @@ Connection ~ 2650 3800
 Wire Wire Line
 	2650 3800 2150 3800
 $Comp
-L appli_resistor:10K0_1608M R?
+L appli_resistor:10K0_1608M R23
 U 1 1 61197DEB
 P 3150 3050
-F 0 "R?" H 3223 2935 50  0000 L CNN
+F 0 "R23" H 3223 2935 50  0000 L CNN
 F 1 "10K0_1608M" H 3223 2855 35  0000 L CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 3260 2900 20  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723233.pdf" V 3285 2900 20  0001 C CNN
@@ -356,10 +356,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 2900 4150 2600
 $Comp
-L appli_power:+5V #PWR?
+L appli_power:+5V #PWR0102
 U 1 1 611A4C56
 P 4150 2600
-F 0 "#PWR?" H 4150 2450 50  0001 C CNN
+F 0 "#PWR0102" H 4150 2450 50  0001 C CNN
 F 1 "+5V" H 4165 2773 50  0000 C CNN
 F 2 "" H 4150 2600 60  0000 C CNN
 F 3 "" H 4150 2600 60  0000 C CNN
@@ -377,10 +377,10 @@ Wire Wire Line
 Wire Wire Line
 	3550 4400 3550 4550
 $Comp
-L appli_power:GND #PWR?
+L appli_power:GND #PWR0101
 U 1 1 611C2739
 P 3550 4550
-F 0 "#PWR?" H 3550 4300 50  0001 C CNN
+F 0 "#PWR0101" H 3550 4300 50  0001 C CNN
 F 1 "GND" H 3555 4377 50  0000 C CNN
 F 2 "" H 3550 4550 50  0001 C CNN
 F 3 "" H 3550 4550 50  0001 C CNN

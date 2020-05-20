@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 20
+Sheet 16 20
 Title ""
 Date ""
 Rev ""
@@ -33,17 +33,17 @@ AR Path="/5EF662C0/5F5A499B" Ref="U?"  Part="1"
 AR Path="/5EF69F20/5F5A499B" Ref="U?"  Part="1" 
 AR Path="/5EF6DACA/5F5A499B" Ref="U?"  Part="1" 
 AR Path="/5EF71689/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/5F59BCDA/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/5F5E2B80/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/5F601265/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/5F601270/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/5F862C35/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/60471F71/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/60538E44/5F5A499B" Ref="U?"  Part="1" 
-AR Path="/605E2F2C/5F5A499B" Ref="U?"  Part="1" 
-F 0 "U?" H 3550 4287 60  0000 C CNN
+AR Path="/5F59BCDA/5F5A499B" Ref="U30"  Part="1" 
+AR Path="/5F5E2B80/5F5A499B" Ref="U31"  Part="1" 
+AR Path="/5F601265/5F5A499B" Ref="U32"  Part="1" 
+AR Path="/5F601270/5F5A499B" Ref="U33"  Part="1" 
+AR Path="/5F862C35/5F5A499B" Ref="U34"  Part="1" 
+AR Path="/60471F71/5F5A499B" Ref="U35"  Part="1" 
+AR Path="/60538E44/5F5A499B" Ref="U36"  Part="1" 
+AR Path="/605E2F2C/5F5A499B" Ref="U37"  Part="1" 
+F 0 "U34" H 3550 4287 60  0000 C CNN
 F 1 "AP2553A" H 3550 4181 60  0000 C CNN
-F 2 "" H 3550 3900 60  0000 C CNN
+F 2 "Applidyne_SOT:SOT95P280X145-6L50N" H 3550 3900 60  0001 C CNN
 F 3 "http://www.diodes.com/_files/datasheets/AP255x.pdf" H 3570 3350 60  0001 C CNN
 F 4 "DIODES ZETEX" H 3550 3110 60  0001 C CNN "manf"
 F 5 "AP2553AW6-7" H 3550 3010 60  0001 C CNN "manf#"
@@ -78,15 +78,15 @@ AR Path="/5EF662C0/5F5A49A3" Ref="#PWR?"  Part="1"
 AR Path="/5EF69F20/5F5A49A3" Ref="#PWR?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49A3" Ref="#PWR?"  Part="1" 
 AR Path="/5EF71689/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A49A3" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A49A3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2050 3450 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A49A3" Ref="#PWR0104"  Part="1" 
+AR Path="/5F5E2B80/5F5A49A3" Ref="#PWR0112"  Part="1" 
+AR Path="/5F601265/5F5A49A3" Ref="#PWR0120"  Part="1" 
+AR Path="/5F601270/5F5A49A3" Ref="#PWR0128"  Part="1" 
+AR Path="/5F862C35/5F5A49A3" Ref="#PWR0136"  Part="1" 
+AR Path="/60471F71/5F5A49A3" Ref="#PWR0144"  Part="1" 
+AR Path="/60538E44/5F5A49A3" Ref="#PWR0152"  Part="1" 
+AR Path="/605E2F2C/5F5A49A3" Ref="#PWR0160"  Part="1" 
+F 0 "#PWR0160" H 2050 3450 50  0001 C CNN
 F 1 "+5V" H 2065 3773 50  0000 C CNN
 F 2 "" H 2050 3600 60  0000 C CNN
 F 3 "" H 2050 3600 60  0000 C CNN
@@ -114,15 +114,15 @@ AR Path="/5EF662C0/5F5A49AA" Ref="#PWR?"  Part="1"
 AR Path="/5EF69F20/5F5A49AA" Ref="#PWR?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49AA" Ref="#PWR?"  Part="1" 
 AR Path="/5EF71689/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A49AA" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A49AA" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3550 4400 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A49AA" Ref="#PWR0106"  Part="1" 
+AR Path="/5F5E2B80/5F5A49AA" Ref="#PWR0114"  Part="1" 
+AR Path="/5F601265/5F5A49AA" Ref="#PWR0122"  Part="1" 
+AR Path="/5F601270/5F5A49AA" Ref="#PWR0130"  Part="1" 
+AR Path="/5F862C35/5F5A49AA" Ref="#PWR0138"  Part="1" 
+AR Path="/60471F71/5F5A49AA" Ref="#PWR0146"  Part="1" 
+AR Path="/60538E44/5F5A49AA" Ref="#PWR0154"  Part="1" 
+AR Path="/605E2F2C/5F5A49AA" Ref="#PWR0162"  Part="1" 
+F 0 "#PWR0162" H 3550 4400 50  0001 C CNN
 F 1 "GND" H 3555 4477 50  0000 C CNN
 F 2 "" H 3550 4650 50  0001 C CNN
 F 3 "" H 3550 4650 50  0001 C CNN
@@ -154,15 +154,15 @@ AR Path="/5EF662C0/5F5A49B3" Ref="#PWR?"  Part="1"
 AR Path="/5EF69F20/5F5A49B3" Ref="#PWR?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49B3" Ref="#PWR?"  Part="1" 
 AR Path="/5EF71689/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A49B3" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A49B3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4500 4400 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A49B3" Ref="#PWR0107"  Part="1" 
+AR Path="/5F5E2B80/5F5A49B3" Ref="#PWR0115"  Part="1" 
+AR Path="/5F601265/5F5A49B3" Ref="#PWR0123"  Part="1" 
+AR Path="/5F601270/5F5A49B3" Ref="#PWR0131"  Part="1" 
+AR Path="/5F862C35/5F5A49B3" Ref="#PWR0139"  Part="1" 
+AR Path="/60471F71/5F5A49B3" Ref="#PWR0147"  Part="1" 
+AR Path="/60538E44/5F5A49B3" Ref="#PWR0155"  Part="1" 
+AR Path="/605E2F2C/5F5A49B3" Ref="#PWR0163"  Part="1" 
+F 0 "#PWR0163" H 4500 4400 50  0001 C CNN
 F 1 "GND" H 4505 4477 50  0000 C CNN
 F 2 "" H 4500 4650 50  0001 C CNN
 F 3 "" H 4500 4650 50  0001 C CNN
@@ -193,17 +193,17 @@ AR Path="/5EF662C0/5F5A49C3" Ref="C?"  Part="1"
 AR Path="/5EF69F20/5F5A49C3" Ref="C?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49C3" Ref="C?"  Part="1" 
 AR Path="/5EF71689/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/5F601265/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/5F601270/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/5F862C35/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/60471F71/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/60538E44/5F5A49C3" Ref="C?"  Part="1" 
-AR Path="/605E2F2C/5F5A49C3" Ref="C?"  Part="1" 
-F 0 "C?" H 1972 4165 50  0000 R CNN
+AR Path="/5F59BCDA/5F5A49C3" Ref="C31"  Part="1" 
+AR Path="/5F5E2B80/5F5A49C3" Ref="C33"  Part="1" 
+AR Path="/5F601265/5F5A49C3" Ref="C35"  Part="1" 
+AR Path="/5F601270/5F5A49C3" Ref="C37"  Part="1" 
+AR Path="/5F862C35/5F5A49C3" Ref="C39"  Part="1" 
+AR Path="/60471F71/5F5A49C3" Ref="C41"  Part="1" 
+AR Path="/60538E44/5F5A49C3" Ref="C43"  Part="1" 
+AR Path="/605E2F2C/5F5A49C3" Ref="C45"  Part="1" 
+F 0 "C39" H 1972 4165 50  0000 R CNN
 F 1 "100n_X7R_1608M" H 1972 4245 35  0000 R CNN
-F 2 "CAPC1608*" V 2165 4200 20  0001 C CNN
+F 2 "Applidyne_Capacitor:CAPC1608X90N" V 2165 4200 20  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 2190 4200 20  0001 C CNN
 F 4 "KEMET" V 2240 4200 20  0001 C CNN "manf"
 F 5 "C0603C104K5RACAUTO" V 2265 4200 20  0001 C CNN "manf#"
@@ -236,15 +236,15 @@ AR Path="/5EF662C0/5F5A49CA" Ref="#PWR?"  Part="1"
 AR Path="/5EF69F20/5F5A49CA" Ref="#PWR?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49CA" Ref="#PWR?"  Part="1" 
 AR Path="/5EF71689/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A49CA" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A49CA" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2050 4400 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A49CA" Ref="#PWR0105"  Part="1" 
+AR Path="/5F5E2B80/5F5A49CA" Ref="#PWR0113"  Part="1" 
+AR Path="/5F601265/5F5A49CA" Ref="#PWR0121"  Part="1" 
+AR Path="/5F601270/5F5A49CA" Ref="#PWR0129"  Part="1" 
+AR Path="/5F862C35/5F5A49CA" Ref="#PWR0137"  Part="1" 
+AR Path="/60471F71/5F5A49CA" Ref="#PWR0145"  Part="1" 
+AR Path="/60538E44/5F5A49CA" Ref="#PWR0153"  Part="1" 
+AR Path="/605E2F2C/5F5A49CA" Ref="#PWR0161"  Part="1" 
+F 0 "#PWR0161" H 2050 4400 50  0001 C CNN
 F 1 "GND" H 2055 4477 50  0000 C CNN
 F 2 "" H 2050 4650 50  0001 C CNN
 F 3 "" H 2050 4650 50  0001 C CNN
@@ -275,17 +275,17 @@ AR Path="/5EF662C0/5F5A49DA" Ref="C?"  Part="1"
 AR Path="/5EF69F20/5F5A49DA" Ref="C?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49DA" Ref="C?"  Part="1" 
 AR Path="/5EF71689/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/5F601265/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/5F601270/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/5F862C35/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/60471F71/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/60538E44/5F5A49DA" Ref="C?"  Part="1" 
-AR Path="/605E2F2C/5F5A49DA" Ref="C?"  Part="1" 
-F 0 "C?" H 5178 4035 50  0000 L CNN
+AR Path="/5F59BCDA/5F5A49DA" Ref="C32"  Part="1" 
+AR Path="/5F5E2B80/5F5A49DA" Ref="C34"  Part="1" 
+AR Path="/5F601265/5F5A49DA" Ref="C36"  Part="1" 
+AR Path="/5F601270/5F5A49DA" Ref="C38"  Part="1" 
+AR Path="/5F862C35/5F5A49DA" Ref="C40"  Part="1" 
+AR Path="/60471F71/5F5A49DA" Ref="C42"  Part="1" 
+AR Path="/60538E44/5F5A49DA" Ref="C44"  Part="1" 
+AR Path="/605E2F2C/5F5A49DA" Ref="C46"  Part="1" 
+F 0 "C40" H 5178 4035 50  0000 L CNN
 F 1 "4u7_X7R_2012M" H 5178 3955 35  0000 L CNN
-F 2 "CAPC2012*" V 5215 4000 20  0001 C CNN
+F 2 "Applidyne_Capacitor:CAPC2012X110N" V 5215 4000 20  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1870456.pdf" V 5240 4000 20  0001 C CNN
 F 4 "MULTICOMP" V 5290 4000 20  0001 C CNN "manf"
 F 5 "MC0805B475K160CT" V 5315 4000 20  0001 C CNN "manf#"
@@ -323,15 +323,15 @@ AR Path="/5EF662C0/5F5A49E4" Ref="#PWR?"  Part="1"
 AR Path="/5EF69F20/5F5A49E4" Ref="#PWR?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49E4" Ref="#PWR?"  Part="1" 
 AR Path="/5EF71689/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A49E4" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A49E4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5100 4400 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A49E4" Ref="#PWR0108"  Part="1" 
+AR Path="/5F5E2B80/5F5A49E4" Ref="#PWR0116"  Part="1" 
+AR Path="/5F601265/5F5A49E4" Ref="#PWR0124"  Part="1" 
+AR Path="/5F601270/5F5A49E4" Ref="#PWR0132"  Part="1" 
+AR Path="/5F862C35/5F5A49E4" Ref="#PWR0140"  Part="1" 
+AR Path="/60471F71/5F5A49E4" Ref="#PWR0148"  Part="1" 
+AR Path="/60538E44/5F5A49E4" Ref="#PWR0156"  Part="1" 
+AR Path="/605E2F2C/5F5A49E4" Ref="#PWR0164"  Part="1" 
+F 0 "#PWR0164" H 5100 4400 50  0001 C CNN
 F 1 "GND" H 5105 4477 50  0000 C CNN
 F 2 "" H 5100 4650 50  0001 C CNN
 F 3 "" H 5100 4650 50  0001 C CNN
@@ -357,15 +357,15 @@ AR Path="/5EF662C0/5F5A49F1" Ref="D?"  Part="1"
 AR Path="/5EF69F20/5F5A49F1" Ref="D?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49F1" Ref="D?"  Part="1" 
 AR Path="/5EF71689/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/5F601265/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/5F601270/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/5F862C35/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/60471F71/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/60538E44/5F5A49F1" Ref="D?"  Part="1" 
-AR Path="/605E2F2C/5F5A49F1" Ref="D?"  Part="1" 
-F 0 "D?" V 5796 4292 50  0000 R CNN
+AR Path="/5F59BCDA/5F5A49F1" Ref="D12"  Part="1" 
+AR Path="/5F5E2B80/5F5A49F1" Ref="D13"  Part="1" 
+AR Path="/5F601265/5F5A49F1" Ref="D14"  Part="1" 
+AR Path="/5F601270/5F5A49F1" Ref="D15"  Part="1" 
+AR Path="/5F862C35/5F5A49F1" Ref="D16"  Part="1" 
+AR Path="/60471F71/5F5A49F1" Ref="D17"  Part="1" 
+AR Path="/60538E44/5F5A49F1" Ref="D18"  Part="1" 
+AR Path="/605E2F2C/5F5A49F1" Ref="D19"  Part="1" 
+F 0 "D16" V 5796 4292 50  0000 R CNN
 F 1 "LED_YELLOW_1608M" V 5705 4292 50  0000 R CNN
 F 2 "Applidyne_LED:LEDC1608X80L40N" H 5750 4600 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 5750 4190 50  0001 C CNN
@@ -398,15 +398,15 @@ AR Path="/5EF662C0/5F5A49FE" Ref="R?"  Part="1"
 AR Path="/5EF69F20/5F5A49FE" Ref="R?"  Part="1" 
 AR Path="/5EF6DACA/5F5A49FE" Ref="R?"  Part="1" 
 AR Path="/5EF71689/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/5F59BCDA/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/5F5E2B80/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/5F601265/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/5F601270/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/5F862C35/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/60471F71/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/60538E44/5F5A49FE" Ref="R?"  Part="1" 
-AR Path="/605E2F2C/5F5A49FE" Ref="R?"  Part="1" 
-F 0 "R?" H 5823 3735 50  0000 L CNN
+AR Path="/5F59BCDA/5F5A49FE" Ref="R28"  Part="1" 
+AR Path="/5F5E2B80/5F5A49FE" Ref="R30"  Part="1" 
+AR Path="/5F601265/5F5A49FE" Ref="R32"  Part="1" 
+AR Path="/5F601270/5F5A49FE" Ref="R34"  Part="1" 
+AR Path="/5F862C35/5F5A49FE" Ref="R36"  Part="1" 
+AR Path="/60471F71/5F5A49FE" Ref="R38"  Part="1" 
+AR Path="/60538E44/5F5A49FE" Ref="R40"  Part="1" 
+AR Path="/605E2F2C/5F5A49FE" Ref="R42"  Part="1" 
+F 0 "R36" H 5823 3735 50  0000 L CNN
 F 1 "1K00_1608M" H 5823 3655 35  0000 L CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 5860 3700 20  0001 C CNN
 F 3 "" V 5885 3700 20  0001 C CNN
@@ -443,15 +443,15 @@ AR Path="/5EF662C0/5F5A4A13" Ref="#PWR?"  Part="1"
 AR Path="/5EF69F20/5F5A4A13" Ref="#PWR?"  Part="1" 
 AR Path="/5EF6DACA/5F5A4A13" Ref="#PWR?"  Part="1" 
 AR Path="/5EF71689/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/5F59BCDA/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A4A13" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A4A13" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5750 4400 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A4A13" Ref="#PWR0109"  Part="1" 
+AR Path="/5F5E2B80/5F5A4A13" Ref="#PWR0117"  Part="1" 
+AR Path="/5F601265/5F5A4A13" Ref="#PWR0125"  Part="1" 
+AR Path="/5F601270/5F5A4A13" Ref="#PWR0133"  Part="1" 
+AR Path="/5F862C35/5F5A4A13" Ref="#PWR0141"  Part="1" 
+AR Path="/60471F71/5F5A4A13" Ref="#PWR0149"  Part="1" 
+AR Path="/60538E44/5F5A4A13" Ref="#PWR0157"  Part="1" 
+AR Path="/605E2F2C/5F5A4A13" Ref="#PWR0165"  Part="1" 
+F 0 "#PWR0165" H 5750 4400 50  0001 C CNN
 F 1 "GND" H 5755 4477 50  0000 C CNN
 F 2 "" H 5750 4650 50  0001 C CNN
 F 3 "" H 5750 4650 50  0001 C CNN
@@ -465,18 +465,18 @@ Wire Wire Line
 Text Notes 5550 3700 0    50   ~ 0
 POWER LED
 $Comp
-L appli_resistor:100K_1608M R?
+L appli_resistor:100K_1608M R27
 U 1 1 5F5A5344
 P 4500 4050
-AR Path="/5F59BCDA/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/5F5E2B80/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/5F601265/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/5F601270/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/5F862C35/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/60471F71/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/60538E44/5F5A5344" Ref="R?"  Part="1" 
-AR Path="/605E2F2C/5F5A5344" Ref="R?"  Part="1" 
-F 0 "R?" H 4573 3935 50  0000 L CNN
+AR Path="/5F59BCDA/5F5A5344" Ref="R27"  Part="1" 
+AR Path="/5F5E2B80/5F5A5344" Ref="R29"  Part="1" 
+AR Path="/5F601265/5F5A5344" Ref="R31"  Part="1" 
+AR Path="/5F601270/5F5A5344" Ref="R33"  Part="1" 
+AR Path="/5F862C35/5F5A5344" Ref="R35"  Part="1" 
+AR Path="/60471F71/5F5A5344" Ref="R37"  Part="1" 
+AR Path="/60538E44/5F5A5344" Ref="R39"  Part="1" 
+AR Path="/605E2F2C/5F5A5344" Ref="R41"  Part="1" 
+F 0 "R35" H 4573 3935 50  0000 L CNN
 F 1 "100K_1608M" H 4573 3855 35  0000 L CNN
 F 2 "Applidyne_Resistor:RESC1608X50N" V 4610 3900 20  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1788326.pdf" V 4635 3900 20  0001 C CNN
@@ -495,18 +495,18 @@ SERIAL_D+
 Text HLabel 7400 3900 0    50   Input ~ 0
 SERIAL_D-
 $Comp
-L appli_power:GND #PWR?
+L appli_power:GND #PWR0110
 U 1 1 5F5A61F5
 P 7400 4300
-AR Path="/5F59BCDA/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/5F5A61F5" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/5F5A61F5" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 7400 4050 50  0001 C CNN
+AR Path="/5F59BCDA/5F5A61F5" Ref="#PWR0110"  Part="1" 
+AR Path="/5F5E2B80/5F5A61F5" Ref="#PWR0118"  Part="1" 
+AR Path="/5F601265/5F5A61F5" Ref="#PWR0126"  Part="1" 
+AR Path="/5F601270/5F5A61F5" Ref="#PWR0134"  Part="1" 
+AR Path="/5F862C35/5F5A61F5" Ref="#PWR0142"  Part="1" 
+AR Path="/60471F71/5F5A61F5" Ref="#PWR0150"  Part="1" 
+AR Path="/60538E44/5F5A61F5" Ref="#PWR0158"  Part="1" 
+AR Path="/605E2F2C/5F5A61F5" Ref="#PWR0166"  Part="1" 
+F 0 "#PWR0166" H 7400 4050 50  0001 C CNN
 F 1 "GND" H 7405 4127 50  0000 C CNN
 F 2 "" H 7400 4300 50  0001 C CNN
 F 3 "" H 7400 4300 50  0001 C CNN
@@ -545,15 +545,15 @@ L appli_usb:USB_A_FEMALE_RA J?
 U 1 1 6046A7E0
 P 7900 4000
 AR Path="/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/5F59BCDA/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/5F5E2B80/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/5F601265/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/5F601270/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/5F862C35/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/60471F71/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/60538E44/6046A7E0" Ref="J?"  Part="1" 
-AR Path="/605E2F2C/6046A7E0" Ref="J?"  Part="1" 
-F 0 "J?" H 8119 4078 60  0000 L CNN
+AR Path="/5F59BCDA/6046A7E0" Ref="J1"  Part="1" 
+AR Path="/5F5E2B80/6046A7E0" Ref="J2"  Part="1" 
+AR Path="/5F601265/6046A7E0" Ref="J3"  Part="1" 
+AR Path="/5F601270/6046A7E0" Ref="J4"  Part="1" 
+AR Path="/5F862C35/6046A7E0" Ref="J5"  Part="1" 
+AR Path="/60471F71/6046A7E0" Ref="J6"  Part="1" 
+AR Path="/60538E44/6046A7E0" Ref="J7"  Part="1" 
+AR Path="/605E2F2C/6046A7E0" Ref="J8"  Part="1" 
+F 0 "J5" H 8119 4078 60  0000 L CNN
 F 1 "USB_A_FEMALE_RA" H 8119 3972 60  0000 L CNN
 F 2 "Applidyne_USB:TE_292303-1" V 8200 4025 60  0001 C CNN
 F 3 "https://au.mouser.com/datasheet/2/418/NG_CD_292303_E12-1248627.pdf" V 8250 4000 20  0001 C CNN
@@ -573,18 +573,18 @@ Connection ~ 7400 4200
 Wire Wire Line
 	7400 4200 7400 4100
 $Comp
-L appli_connector_wurth:CONN_01X04 P?
+L appli_connector_wurth:CONN_01X04 P1
 U 1 1 6046CF54
 P 9250 3950
-AR Path="/5F59BCDA/6046CF54" Ref="P?"  Part="1" 
-AR Path="/5F5E2B80/6046CF54" Ref="P?"  Part="1" 
-AR Path="/5F601265/6046CF54" Ref="P?"  Part="1" 
-AR Path="/5F601270/6046CF54" Ref="P?"  Part="1" 
-AR Path="/5F862C35/6046CF54" Ref="P?"  Part="1" 
-AR Path="/60471F71/6046CF54" Ref="P?"  Part="1" 
-AR Path="/60538E44/6046CF54" Ref="P?"  Part="1" 
-AR Path="/605E2F2C/6046CF54" Ref="P?"  Part="1" 
-F 0 "P?" H 9167 3575 50  0000 C CNN
+AR Path="/5F59BCDA/6046CF54" Ref="P1"  Part="1" 
+AR Path="/5F5E2B80/6046CF54" Ref="P2"  Part="1" 
+AR Path="/5F601265/6046CF54" Ref="P3"  Part="1" 
+AR Path="/5F601270/6046CF54" Ref="P4"  Part="1" 
+AR Path="/5F862C35/6046CF54" Ref="P5"  Part="1" 
+AR Path="/60471F71/6046CF54" Ref="P6"  Part="1" 
+AR Path="/60538E44/6046CF54" Ref="P7"  Part="1" 
+AR Path="/605E2F2C/6046CF54" Ref="P8"  Part="1" 
+F 0 "P5" H 9167 3575 50  0000 C CNN
 F 1 "CONN_01X04" H 9167 3666 50  0000 C CNN
 F 2 "Applidyne_Connector_Wurth:61300411121" V 9425 3950 50  0001 C CNN
 F 3 "" H 9250 3625 50  0001 C CNN
@@ -607,18 +607,18 @@ Wire Wire Line
 Wire Wire Line
 	10050 4100 10050 4300
 $Comp
-L appli_power:GND #PWR?
+L appli_power:GND #PWR0111
 U 1 1 6046FCF6
 P 10050 4300
-AR Path="/5F59BCDA/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/5F5E2B80/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/5F601265/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/5F601270/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/5F862C35/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/60471F71/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/60538E44/6046FCF6" Ref="#PWR?"  Part="1" 
-AR Path="/605E2F2C/6046FCF6" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 10050 4050 50  0001 C CNN
+AR Path="/5F59BCDA/6046FCF6" Ref="#PWR0111"  Part="1" 
+AR Path="/5F5E2B80/6046FCF6" Ref="#PWR0119"  Part="1" 
+AR Path="/5F601265/6046FCF6" Ref="#PWR0127"  Part="1" 
+AR Path="/5F601270/6046FCF6" Ref="#PWR0135"  Part="1" 
+AR Path="/5F862C35/6046FCF6" Ref="#PWR0143"  Part="1" 
+AR Path="/60471F71/6046FCF6" Ref="#PWR0151"  Part="1" 
+AR Path="/60538E44/6046FCF6" Ref="#PWR0159"  Part="1" 
+AR Path="/605E2F2C/6046FCF6" Ref="#PWR0167"  Part="1" 
+F 0 "#PWR0167" H 10050 4050 50  0001 C CNN
 F 1 "GND" H 10055 4127 50  0000 C CNN
 F 2 "" H 10050 4300 50  0001 C CNN
 F 3 "" H 10050 4300 50  0001 C CNN
