@@ -1812,4 +1812,84 @@ F 10 "10" H 7160 5775 60  0001 C CNN "Supplier Price Break"
 	6    7150 7800
 	1    0    0    -1  
 $EndComp
+$Comp
+L appli_capacitor:47u_ELEC_25V_500X580M C62
+U 1 1 5ECB700C
+P 4500 4400
+F 0 "C62" H 4578 4300 50  0000 L CNN
+F 1 "47u_ELEC_25V_500X580M" H 4578 4255 35  0001 L CNN
+F 2 "Applidyne_Capacitor:CAPAE530X610N" V 4615 4300 20  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/315/kamaya_06202019_Capacitor_Hybrid_Anti-Vib_Hi_Temp_-1606247.pdf" V 4640 4300 20  0001 C CNN
+F 4 "PANASONIC" V 4690 4300 20  0001 C CNN "manf"
+F 5 "EEEFT1E470AR" V 4715 4300 20  0001 C CNN "manf#"
+F 6 "Mouser" V 4740 4300 20  0001 C CNN "Supplier"
+F 7 "667-EEE-FT1E470AR" V 4765 4300 20  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Panasonic/EEE-FT1E470AR?qs=CMJjuEs1%252BuFVvfWHJODU8Q%3D%3D" V 4790 4300 20  0001 C CNN "Supplier URL"
+F 9 "0.764" V 4815 4300 20  0001 C CNN "Supplier Price"
+F 10 "1" V 4840 4300 20  0001 C CNN "Supplier Price Break"
+	1    4500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L appli_capacitor:47u_ELEC_25V_500X580M C63
+U 1 1 5ECB76DD
+P 4900 4400
+F 0 "C63" H 4978 4335 50  0000 L CNN
+F 1 "47u_ELEC_25V_500X580M" H 4978 4255 35  0000 L CNN
+F 2 "Applidyne_Capacitor:CAPAE530X610N" V 5015 4300 20  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/315/kamaya_06202019_Capacitor_Hybrid_Anti-Vib_Hi_Temp_-1606247.pdf" V 5040 4300 20  0001 C CNN
+F 4 "PANASONIC" V 5090 4300 20  0001 C CNN "manf"
+F 5 "EEEFT1E470AR" V 5115 4300 20  0001 C CNN "manf#"
+F 6 "Mouser" V 5140 4300 20  0001 C CNN "Supplier"
+F 7 "667-EEE-FT1E470AR" V 5165 4300 20  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Panasonic/EEE-FT1E470AR?qs=CMJjuEs1%252BuFVvfWHJODU8Q%3D%3D" V 5190 4300 20  0001 C CNN "Supplier URL"
+F 9 "0.764" V 5215 4300 20  0001 C CNN "Supplier Price"
+F 10 "1" V 5240 4300 20  0001 C CNN "Supplier Price Break"
+	1    4900 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4400 4500 4300
+Wire Wire Line
+	4500 4300 4700 4300
+Wire Wire Line
+	4900 4300 4900 4400
+Wire Wire Line
+	4900 4600 4900 4700
+Wire Wire Line
+	4900 4700 4700 4700
+Wire Wire Line
+	4500 4700 4500 4600
+$Comp
+L appli_power:GND #PWR0222
+U 1 1 5ECD5032
+P 4700 4750
+F 0 "#PWR0222" H 4700 4500 50  0001 C CNN
+F 1 "GND" H 4705 4577 50  0000 C CNN
+F 2 "" H 4700 4750 50  0001 C CNN
+F 3 "" H 4700 4750 50  0001 C CNN
+	1    4700 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4750 4700 4700
+Connection ~ 4700 4700
+Wire Wire Line
+	4700 4700 4500 4700
+Wire Wire Line
+	4700 4300 4700 4250
+Connection ~ 4700 4300
+Wire Wire Line
+	4700 4300 4900 4300
+$Comp
+L appli_power:+5V #PWR0223
+U 1 1 5ED01B99
+P 4700 4250
+F 0 "#PWR0223" H 4700 4100 50  0001 C CNN
+F 1 "+5V" H 4715 4423 50  0000 C CNN
+F 2 "" H 4700 4250 60  0000 C CNN
+F 3 "" H 4700 4250 60  0000 C CNN
+	1    4700 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
