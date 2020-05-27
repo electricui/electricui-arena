@@ -854,9 +854,9 @@ OUT_RX_0
 Text Notes 5300 950  0    50   ~ 0
 "Collapse" the input array, then\n"Expand" it back out to devices to build the \n8:8 path selection functionality
 Wire Wire Line
-	5250 2150 6900 2150
+	5250 2150 5750 2150
 Wire Wire Line
-	5250 4550 6900 4550
+	5250 4550 5750 4550
 Wire Wire Line
 	3950 6550 4350 6550
 Wire Wire Line
@@ -1457,14 +1457,6 @@ F 10 "10" H 4800 650 50  0001 C CNN "Supplier Price Break"
 	1    4800 2350
 	-1   0    0    -1  
 $EndComp
-Wire Bus Line
-	4450 6350 4450 6650
-Wire Bus Line
-	4450 5950 4450 6250
-Wire Bus Line
-	5650 2450 5650 6250
-Wire Bus Line
-	6500 2450 6500 6650
 $Comp
 L appli_power:GND #PWR0219
 U 1 1 5EE70DCE
@@ -1498,4 +1490,61 @@ F 3 "" H 2100 6250 50  0001 C CNN
 	1    2100 6250
 	0    -1   -1   0   
 $EndComp
+$Comp
+L appli_connector_wurth:CONN_01X03 P9
+U 1 1 5EDA815F
+P 6300 3000
+F 0 "P9" H 6217 2675 50  0000 C CNN
+F 1 "CONN_01X03" H 6217 2766 50  0000 C CNN
+F 2 "Applidyne_Connector_Wurth:61300311121" V 6475 3000 50  0001 C CNN
+F 3 "" H 6300 2650 50  0001 C CNN
+F 4 "WURTH ELECTRONIK" H 6300 2550 60  0001 C CNN "manf"
+F 5 "61300311121" H 6300 2450 60  0001 C CNN "manf#"
+F 6 "Element 14" H 6300 2350 60  0001 C CNN "Supplier"
+F 7 "2356154" H 6300 2275 60  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/wurth-elektronik/61300311121/header-2-54mm-pin-tht-vertical/dp/2356154" H 6300 2175 60  0001 C CNN "Supplier URL"
+F 9 "0.12" H 6300 2075 60  0001 C CNN "Supplier Price"
+F 10 "1" H 6300 1975 60  0001 C CNN "Supplier Price Break"
+	1    6300 3000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6100 3100 6000 3100
+Wire Wire Line
+	6000 3100 6000 3200
+$Comp
+L appli_power:GND #PWR0272
+U 1 1 5EDAE25B
+P 6000 3200
+F 0 "#PWR0272" H 6000 2950 50  0001 C CNN
+F 1 "GND" H 6005 3027 50  0000 C CNN
+F 2 "" H 6000 3200 50  0001 C CNN
+F 3 "" H 6000 3200 50  0001 C CNN
+	1    6000 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2900 5750 2900
+Wire Wire Line
+	5750 2900 5750 2150
+Connection ~ 5750 2150
+Wire Wire Line
+	5750 2150 6900 2150
+Wire Wire Line
+	6100 3000 5750 3000
+Wire Wire Line
+	5750 3000 5750 4550
+Connection ~ 5750 4550
+Wire Wire Line
+	5750 4550 6900 4550
+Text Notes 6000 2600 0    50   ~ 0
+DEBUG\nHEADER
+Wire Bus Line
+	4450 6350 4450 6650
+Wire Bus Line
+	4450 5950 4450 6250
+Wire Bus Line
+	5650 2450 5650 6250
+Wire Bus Line
+	6500 2450 6500 6650
 $EndSCHEMATC
