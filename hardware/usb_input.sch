@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:hardware-cache
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -330,42 +331,6 @@ F 3 "" H 7850 6200 60  0000 C CNN
 $EndComp
 Text Notes 4850 2250 0    50   ~ 0
 USBC makes it slightly easier to interop with\nmacOS based CI/CD instances without USBA
-$Comp
-L appli_capacitor:47u_ELEC_25V_500X580M C62
-U 1 1 5ECB700C
-P 3600 2450
-F 0 "C62" H 3678 2350 50  0000 L CNN
-F 1 "47u_ELEC_25V_500X580M" H 3678 2305 35  0001 L CNN
-F 2 "Applidyne_Capacitor:CAPAE530X610N" V 3715 2350 20  0001 C CNN
-F 3 "https://au.mouser.com/datasheet/2/315/kamaya_06202019_Capacitor_Hybrid_Anti-Vib_Hi_Temp_-1606247.pdf" V 3740 2350 20  0001 C CNN
-F 4 "PANASONIC" V 3790 2350 20  0001 C CNN "manf"
-F 5 "EEEFT1E470AR" V 3815 2350 20  0001 C CNN "manf#"
-F 6 "Mouser" V 3840 2350 20  0001 C CNN "Supplier"
-F 7 "667-EEE-FT1E470AR" V 3865 2350 20  0001 C CNN "Supplier Part No"
-F 8 "https://au.mouser.com/ProductDetail/Panasonic/EEE-FT1E470AR?qs=CMJjuEs1%252BuFVvfWHJODU8Q%3D%3D" V 3890 2350 20  0001 C CNN "Supplier URL"
-F 9 "0.764" V 3915 2350 20  0001 C CNN "Supplier Price"
-F 10 "1" V 3940 2350 20  0001 C CNN "Supplier Price Break"
-	1    3600 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L appli_capacitor:47u_ELEC_25V_500X580M C63
-U 1 1 5ECB76DD
-P 4000 2450
-F 0 "C63" H 4078 2385 50  0000 L CNN
-F 1 "47u_ELEC_25V_500X580M" H 4078 2305 35  0000 L CNN
-F 2 "Applidyne_Capacitor:CAPAE530X610N" V 4115 2350 20  0001 C CNN
-F 3 "https://au.mouser.com/datasheet/2/315/kamaya_06202019_Capacitor_Hybrid_Anti-Vib_Hi_Temp_-1606247.pdf" V 4140 2350 20  0001 C CNN
-F 4 "PANASONIC" V 4190 2350 20  0001 C CNN "manf"
-F 5 "EEEFT1E470AR" V 4215 2350 20  0001 C CNN "manf#"
-F 6 "Mouser" V 4240 2350 20  0001 C CNN "Supplier"
-F 7 "667-EEE-FT1E470AR" V 4265 2350 20  0001 C CNN "Supplier Part No"
-F 8 "https://au.mouser.com/ProductDetail/Panasonic/EEE-FT1E470AR?qs=CMJjuEs1%252BuFVvfWHJODU8Q%3D%3D" V 4290 2350 20  0001 C CNN "Supplier URL"
-F 9 "0.764" V 4315 2350 20  0001 C CNN "Supplier Price"
-F 10 "1" V 4340 2350 20  0001 C CNN "Supplier Price Break"
-	1    4000 2450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3600 2450 3600 2350
 Wire Wire Line
@@ -753,4 +718,40 @@ Wire Wire Line
 	7000 6300 7500 6300
 Text Notes 5150 5800 0    50   ~ 0
 Powers the USB mux, I2C IO expanders
+$Comp
+L appli_capacitor:100u_ELEC_35V_660X580M C63
+U 1 1 5F1CD07C
+P 4000 2450
+F 0 "C63" H 4078 2385 50  0000 L CNN
+F 1 "100u_ELEC_35V_660X580M" H 4078 2305 35  0000 L CNN
+F 2 "Applidyne_Capacitor:CAPAE660X580DD180L260N" V 4115 2350 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1790597.pdf" V 4140 2350 20  0001 C CNN
+F 4 "PANASONIC" V 4190 2350 20  0001 C CNN "manf"
+F 5 "EEEFT1V101AP" V 4215 2350 20  0001 C CNN "manf#"
+F 6 "Element14" V 4240 2350 20  0001 C CNN "Supplier"
+F 7 "1868417" V 4265 2350 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/panasonic-electronic-components/eeeft1v101ap/cap-alu-elec-100uf-35v-smd/dp/1868417" V 4290 2350 20  0001 C CNN "Supplier URL"
+F 9 "1.02" V 4315 2350 20  0001 C CNN "Supplier Price"
+F 10 "1" V 4340 2350 20  0001 C CNN "Supplier Price Break"
+	1    4000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L appli_capacitor:100u_ELEC_35V_660X580M C62
+U 1 1 5F1CEF22
+P 3600 2450
+F 0 "C62" H 3678 2350 50  0000 L CNN
+F 1 "100u_ELEC_35V_660X580M" H 3678 2305 35  0001 L CNN
+F 2 "Applidyne_Capacitor:CAPAE660X580DD180L260N" V 3715 2350 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1790597.pdf" V 3740 2350 20  0001 C CNN
+F 4 "PANASONIC" V 3790 2350 20  0001 C CNN "manf"
+F 5 "EEEFT1V101AP" V 3815 2350 20  0001 C CNN "manf#"
+F 6 "Element14" V 3840 2350 20  0001 C CNN "Supplier"
+F 7 "1868417" V 3865 2350 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/panasonic-electronic-components/eeeft1v101ap/cap-alu-elec-100uf-35v-smd/dp/1868417" V 3890 2350 20  0001 C CNN "Supplier URL"
+F 9 "1.02" V 3915 2350 20  0001 C CNN "Supplier Price"
+F 10 "1" V 3940 2350 20  0001 C CNN "Supplier Price Break"
+	1    3600 2450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

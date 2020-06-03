@@ -51,42 +51,6 @@ MICROCONTROLLER
 Text Notes 4050 2200 0    50   ~ 0
 Feather footprint allows for any architecture as host.\nExpect ETHERNET wing attachment additional host comm path.
 $Comp
-L appli_switch:SKPGABE010_SPST_SMD SW1
-U 1 1 607F517A
-P 8850 4900
-F 0 "SW1" H 8850 5232 50  0000 C CNN
-F 1 "SKPGABE010_SPST_SMD" H 8850 5141 50  0000 C CNN
-F 2 "Applidyne_Switch:SKPGABE010" H 8850 4710 20  0001 C CNN
-F 3 "http://docs-asia.electrocomponents.com/webdocs/14b0/0900766b814b0f5d.pdf" H 8850 4685 20  0001 C CNN
-F 4 "ALPS" H 8850 4635 20  0001 C CNN "manf"
-F 5 "SKPGABE010" H 8850 4610 20  0001 C CNN "manf#"
-F 6 "RS Online" H 8850 4585 20  0001 C CNN "Supplier"
-F 7 "917-3832" H 8850 4560 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/panasonic-electronic-components/evqpf208k/switch-tact-7-5x7-5mm-1-6n/dp/2079502" H 8850 4535 20  0001 C CNN "Supplier URL"
-F 9 "1.16" H 8850 4510 20  0001 C CNN "Supplier Price"
-F 10 "10" H 8850 4485 20  0001 C CNN "Supplier Price Break"
-	1    8850 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L appli_switch:SKPGABE010_SPST_SMD SW2
-U 1 1 607F5959
-P 8850 5500
-F 0 "SW2" H 8850 5832 50  0000 C CNN
-F 1 "SKPGABE010_SPST_SMD" H 8850 5741 50  0000 C CNN
-F 2 "Applidyne_Switch:SKPGABE010" H 8850 5310 20  0001 C CNN
-F 3 "http://docs-asia.electrocomponents.com/webdocs/14b0/0900766b814b0f5d.pdf" H 8850 5285 20  0001 C CNN
-F 4 "ALPS" H 8850 5235 20  0001 C CNN "manf"
-F 5 "SKPGABE010" H 8850 5210 20  0001 C CNN "manf#"
-F 6 "RS Online" H 8850 5185 20  0001 C CNN "Supplier"
-F 7 "917-3832" H 8850 5160 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/panasonic-electronic-components/evqpf208k/switch-tact-7-5x7-5mm-1-6n/dp/2079502" H 8850 5135 20  0001 C CNN "Supplier URL"
-F 9 "1.16" H 8850 5110 20  0001 C CNN "Supplier Price"
-F 10 "10" H 8850 5085 20  0001 C CNN "Supplier Price Break"
-	1    8850 5500
-	1    0    0    -1  
-$EndComp
-$Comp
 L appli_resistor:4K7_1608M R22
 U 1 1 6118D691
 P 2650 3100
@@ -796,9 +760,9 @@ Wire Wire Line
 Wire Wire Line
 	4500 3100 4350 3100
 Wire Wire Line
-	8250 5500 8350 5500
+	8250 5500 8500 5500
 Wire Wire Line
-	8350 4900 8250 4900
+	8500 4900 8250 4900
 Wire Wire Line
 	9350 4900 9600 4900
 Wire Wire Line
@@ -828,4 +792,40 @@ Wire Wire Line
 	9600 5500 9600 4900
 Text Notes 3650 6000 0    50   ~ 0
 As the ethernet wings have the 8P8C facing away from the USB connector,\nthe feather footprint should be rotated opposite conventional style
+$Comp
+L appli_switch:B3U-1000P_SPST-NO_SMD SW1
+U 1 1 5F1BC068
+P 8900 4900
+F 0 "SW1" H 8925 5142 50  0000 C CNN
+F 1 "B3U-1000P_SPST-NO_SMD" H 8925 5051 50  0000 C CNN
+F 2 "Applidyne_Switch:B3U-1000P" H 8900 4660 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2082411.pdf" H 8900 4635 20  0001 C CNN
+F 4 "OMRON" H 8900 4585 20  0001 C CNN "manf"
+F 5 "B3U-1000P" H 8900 4560 20  0001 C CNN "manf#"
+F 6 "Element 14" H 8900 4535 20  0001 C CNN "Supplier"
+F 7 "1333652" H 8900 4510 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/omron-electronic-components/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652" H 8900 4485 20  0001 C CNN "Supplier URL"
+F 9 "0.546" H 8900 4460 20  0001 C CNN "Supplier Price"
+F 10 "5" H 8900 4435 20  0001 C CNN "Supplier Price Break"
+	1    8900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L appli_switch:B3U-1000P_SPST-NO_SMD SW2
+U 1 1 5F1BE353
+P 8900 5500
+F 0 "SW2" H 8925 5742 50  0000 C CNN
+F 1 "B3U-1000P_SPST-NO_SMD" H 8925 5651 50  0000 C CNN
+F 2 "Applidyne_Switch:B3U-1000P" H 8900 5260 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2082411.pdf" H 8900 5235 20  0001 C CNN
+F 4 "OMRON" H 8900 5185 20  0001 C CNN "manf"
+F 5 "B3U-1000P" H 8900 5160 20  0001 C CNN "manf#"
+F 6 "Element 14" H 8900 5135 20  0001 C CNN "Supplier"
+F 7 "1333652" H 8900 5110 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/omron-electronic-components/b3u-1000p/switch-spst-no-0-05a-12v-smd/dp/1333652" H 8900 5085 20  0001 C CNN "Supplier URL"
+F 9 "0.546" H 8900 5060 20  0001 C CNN "Supplier Price"
+F 10 "5" H 8900 5035 20  0001 C CNN "Supplier Price Break"
+	1    8900 5500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
