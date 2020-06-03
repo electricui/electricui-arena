@@ -45,154 +45,7 @@ Text HLabel 2150 3600 0    50   Output ~ 0
 Text HLabel 2150 3500 0    50   Input ~ 0
 INT
 Text Notes 2150 4050 0    50   ~ 0
-IO Expanders are use for all\nmanagement IO
-$Comp
-L appli_device:LED_RED_1608M D9
-U 1 1 607E0E89
-P 8950 2550
-F 0 "D9" H 8950 2305 50  0000 C CNN
-F 1 "LED_RED_1608M" H 8950 2396 50  0000 C CNN
-F 2 "Applidyne_LED:LEDC1608X80L40N" H 8950 2750 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8950 2340 50  0001 C CNN
-F 4 "DIALIGHT" H 8950 2130 60  0001 C CNN "manf"
-F 5 "5988010107F" H 8950 2040 60  0001 C CNN "manf#"
-F 6 "Element 14" H 8950 1940 60  0001 C CNN "Supplier"
-F 7 "1465988" H 8950 1840 60  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/dialight/5988010107f/led-0603-red-40mcd-635nm/dp/1465988" H 8960 1760 60  0001 C CNN "Supplier URL"
-F 9 "0.18" H 8950 1660 60  0001 C CNN "Supplier Price"
-F 10 "10" H 8950 1560 60  0001 C CNN "Supplier Price Break"
-	1    8950 2550
-	-1   0    0    1   
-$EndComp
-$Comp
-L appli_device:LED_GREEN_1608M D11
-U 1 1 607E24C9
-P 8950 3350
-F 0 "D11" H 8950 3105 50  0000 C CNN
-F 1 "LED_GREEN_1608M" H 8950 3196 50  0000 C CNN
-F 2 "Applidyne_LED:LEDC1608X80L40N" H 8850 3350 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8950 3140 50  0001 C CNN
-F 4 "DIALIGHT" H 8950 2930 60  0001 C CNN "manf"
-F 5 "5988070107F" H 8950 2840 60  0001 C CNN "manf#"
-F 6 "Element 14" H 8950 2740 60  0001 C CNN "Supplier"
-F 7 "1465991" H 8950 2640 60  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/dialight/5988070107f/led-0603-green-20mcd-566nm/dp/1465991" H 8960 2560 60  0001 C CNN "Supplier URL"
-F 9 "0.4" H 8950 2460 60  0001 C CNN "Supplier Price"
-F 10 "10" H 8950 2360 60  0001 C CNN "Supplier Price Break"
-	1    8950 3350
-	-1   0    0    1   
-$EndComp
-$Comp
-L appli_device:LED_YELLOW_1608M D10
-U 1 1 607E3948
-P 8950 2950
-F 0 "D10" H 8950 2705 50  0000 C CNN
-F 1 "LED_YELLOW_1608M" H 8950 2796 50  0000 C CNN
-F 2 "Applidyne_LED:LEDC1608X80L40N" H 8950 3150 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8950 2740 50  0001 C CNN
-F 4 "DIALIGHT" H 8950 2530 60  0001 C CNN "manf"
-F 5 "5988040107F" H 8950 2440 60  0001 C CNN "manf#"
-F 6 "Element 14" H 8950 2340 60  0001 C CNN "Supplier"
-F 7 "1465989" H 8950 2240 60  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/dialight/5988040107f/led-yellow-0-8mm-x-1-1mm-130mcd/dp/1465989" H 8960 2160 60  0001 C CNN "Supplier URL"
-F 9 "0.29" H 8950 2060 60  0001 C CNN "Supplier Price"
-F 10 "10" H 8950 1960 60  0001 C CNN "Supplier Price Break"
-	1    8950 2950
-	-1   0    0    1   
-$EndComp
-$Comp
-L appli_resistor:1K00_1608M R24
-U 1 1 607E5642
-P 8450 2550
-F 0 "R24" V 8262 2400 50  0000 C CNN
-F 1 "1K00_1608M" V 8342 2400 35  0000 C CNN
-F 2 "Applidyne_Resistor:RESC1608X50N" V 8560 2400 20  0001 C CNN
-F 3 "" V 8585 2400 20  0001 C CNN
-F 4 "MULTICOMP" V 8635 2400 20  0001 C CNN "manf"
-F 5 "MCHP03W8F1001T5E" V 8660 2400 20  0001 C CNN "manf#"
-F 6 "Element14" V 8685 2400 20  0001 C CNN "Supplier"
-F 7 "1576283" V 8710 2400 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/multicomp/mchp03w8f1001t5e/resistor-thick-film-1k-0-125w/dp/1576283" V 8735 2400 20  0001 C CNN "Supplier URL"
-F 9 "0.011" V 8760 2400 20  0001 C CNN "Supplier Price"
-F 10 "50+" V 8785 2400 20  0001 C CNN "Supplier Price Break"
-	1    8450 2550
-	0    1    1    0   
-$EndComp
-$Comp
-L appli_resistor:1K00_1608M R25
-U 1 1 607E6472
-P 8450 2950
-F 0 "R25" V 8262 2800 50  0000 C CNN
-F 1 "1K00_1608M" V 8342 2800 35  0000 C CNN
-F 2 "Applidyne_Resistor:RESC1608X50N" V 8560 2800 20  0001 C CNN
-F 3 "" V 8585 2800 20  0001 C CNN
-F 4 "MULTICOMP" V 8635 2800 20  0001 C CNN "manf"
-F 5 "MCHP03W8F1001T5E" V 8660 2800 20  0001 C CNN "manf#"
-F 6 "Element14" V 8685 2800 20  0001 C CNN "Supplier"
-F 7 "1576283" V 8710 2800 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/multicomp/mchp03w8f1001t5e/resistor-thick-film-1k-0-125w/dp/1576283" V 8735 2800 20  0001 C CNN "Supplier URL"
-F 9 "0.011" V 8760 2800 20  0001 C CNN "Supplier Price"
-F 10 "50+" V 8785 2800 20  0001 C CNN "Supplier Price Break"
-	1    8450 2950
-	0    1    1    0   
-$EndComp
-$Comp
-L appli_resistor:1K00_1608M R26
-U 1 1 607E6DE7
-P 8450 3350
-F 0 "R26" V 8262 3200 50  0000 C CNN
-F 1 "1K00_1608M" V 8342 3200 35  0000 C CNN
-F 2 "Applidyne_Resistor:RESC1608X50N" V 8560 3200 20  0001 C CNN
-F 3 "" V 8585 3200 20  0001 C CNN
-F 4 "MULTICOMP" V 8635 3200 20  0001 C CNN "manf"
-F 5 "MCHP03W8F1001T5E" V 8660 3200 20  0001 C CNN "manf#"
-F 6 "Element14" V 8685 3200 20  0001 C CNN "Supplier"
-F 7 "1576283" V 8710 3200 20  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/multicomp/mchp03w8f1001t5e/resistor-thick-film-1k-0-125w/dp/1576283" V 8735 3200 20  0001 C CNN "Supplier URL"
-F 9 "0.011" V 8760 3200 20  0001 C CNN "Supplier Price"
-F 10 "50+" V 8785 3200 20  0001 C CNN "Supplier Price Break"
-	1    8450 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8450 3350 8750 3350
-Wire Wire Line
-	8450 2950 8750 2950
-Wire Wire Line
-	8450 2550 8750 2550
-Wire Wire Line
-	9150 2550 9500 2550
-Wire Wire Line
-	9500 2550 9500 2950
-Wire Wire Line
-	9500 2950 9150 2950
-Wire Wire Line
-	9500 2950 9500 3350
-Wire Wire Line
-	9500 3350 9150 3350
-Connection ~ 9500 2950
-Wire Wire Line
-	9500 3350 9500 3450
-Connection ~ 9500 3350
-$Comp
-L appli_power:GND #PWR0103
-U 1 1 607EB90C
-P 9500 3450
-F 0 "#PWR0103" H 9500 3200 50  0001 C CNN
-F 1 "GND" H 9505 3277 50  0000 C CNN
-F 2 "" H 9500 3450 50  0001 C CNN
-F 3 "" H 9500 3450 50  0001 C CNN
-	1    9500 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8150 2550 7950 2550
-Wire Wire Line
-	8150 2950 7950 2950
-Wire Wire Line
-	8150 3350 7950 3350
-Text Notes 8400 2100 0    79   ~ 16
-STATUS LEDS
+IO Expanders are used for all\nmanagement IO
 Text Notes 4350 1800 0    79   ~ 16
 MICROCONTROLLER
 Text Notes 4050 2200 0    50   ~ 0
@@ -333,24 +186,6 @@ Wire Wire Line
 	2650 3050 2400 3050
 Wire Wire Line
 	2150 3500 4500 3500
-Text GLabel 7950 2550 0    50   Input ~ 0
-STATUS_0
-Text GLabel 7950 2950 0    50   Input ~ 0
-STATUS_1
-Text GLabel 7950 3350 0    50   Input ~ 0
-STATUS_2
-Text GLabel 4100 3000 0    50   Output ~ 0
-STATUS_0
-Text GLabel 4100 3100 0    50   Output ~ 0
-STATUS_1
-Text GLabel 4100 3200 0    50   Output ~ 0
-STATUS_2
-Wire Wire Line
-	4100 3000 4500 3000
-Wire Wire Line
-	4100 3100 4500 3100
-Wire Wire Line
-	4100 3200 4500 3200
 Wire Wire Line
 	4500 2900 4150 2900
 Wire Wire Line
@@ -368,9 +203,7 @@ F 3 "" H 4150 2600 60  0000 C CNN
 $EndComp
 Text Notes 8350 4250 0    79   ~ 16
 MANUAL CONTROL
-Text GLabel 7800 4850 0    50   Input ~ 0
-BTN_0
-Text GLabel 7800 5500 0    50   Input ~ 0
+Text GLabel 8250 5500 0    50   Input ~ 0
 BTN_1
 Wire Wire Line
 	4500 4400 3550 4400
@@ -908,4 +741,91 @@ Text HLabel 4350 4500 0    50   Output ~ 0
 WAVEFORM
 Wire Wire Line
 	4350 4500 4500 4500
+$Comp
+L appli_capacitor:100n_X7R_1608M C50
+U 1 1 5ED963F5
+P 3250 2550
+F 0 "C50" H 3172 2415 50  0000 R CNN
+F 1 "100n_X7R_1608M" H 3172 2495 35  0000 R CNN
+F 2 "Applidyne_Capacitor:CAPC1608X90N" V 3365 2450 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 3390 2450 20  0001 C CNN
+F 4 "KEMET" V 3440 2450 20  0001 C CNN "manf"
+F 5 "C0603C104K5RACAUTO" V 3465 2450 20  0001 C CNN "manf#"
+F 6 "Element14" V 3490 2450 20  0001 C CNN "Supplier"
+F 7 "2070398" V 3515 2450 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/kemet/c0603c104k5racauto/cap-mlcc-x7r-100nf-50v-0603/dp/2070398" V 3540 2450 20  0001 C CNN "Supplier URL"
+F 9 "0.011" V 3565 2450 20  0001 C CNN "Supplier Price"
+F 10 "1" V 3590 2450 20  0001 C CNN "Supplier Price Break"
+	1    3250 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L appli_power:+5V #PWR0179
+U 1 1 5ED97403
+P 3250 2300
+F 0 "#PWR0179" H 3250 2150 50  0001 C CNN
+F 1 "+5V" H 3265 2473 50  0000 C CNN
+F 2 "" H 3250 2300 60  0000 C CNN
+F 3 "" H 3250 2300 60  0000 C CNN
+	1    3250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L appli_power:GND #PWR0182
+U 1 1 5ED978A4
+P 3250 2600
+F 0 "#PWR0182" H 3250 2350 50  0001 C CNN
+F 1 "GND" H 3255 2427 50  0000 C CNN
+F 2 "" H 3250 2600 50  0001 C CNN
+F 3 "" H 3250 2600 50  0001 C CNN
+	1    3250 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2600 3250 2550
+Wire Wire Line
+	3250 2350 3250 2300
+Text GLabel 4350 3200 0    50   Input ~ 0
+BTN_0
+Text GLabel 4350 3100 0    50   Input ~ 0
+BTN_1
+Text GLabel 8250 4900 0    50   Input ~ 0
+BTN_0
+Wire Wire Line
+	4350 3200 4500 3200
+Wire Wire Line
+	4500 3100 4350 3100
+Wire Wire Line
+	8250 5500 8350 5500
+Wire Wire Line
+	8350 4900 8250 4900
+Wire Wire Line
+	9350 4900 9600 4900
+Wire Wire Line
+	9350 5500 9600 5500
+NoConn ~ 4500 4100
+NoConn ~ 4500 4200
+NoConn ~ 4500 4300
+NoConn ~ 4500 3000
+NoConn ~ 4500 2800
+NoConn ~ 4500 2700
+NoConn ~ 4500 3400
+$Comp
+L appli_power:GND #PWR0186
+U 1 1 5EDE9A9A
+P 9600 5600
+F 0 "#PWR0186" H 9600 5350 50  0001 C CNN
+F 1 "GND" H 9605 5427 50  0000 C CNN
+F 2 "" H 9600 5600 50  0001 C CNN
+F 3 "" H 9600 5600 50  0001 C CNN
+	1    9600 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 5600 9600 5500
+Connection ~ 9600 5500
+Wire Wire Line
+	9600 5500 9600 4900
+Text Notes 3650 6000 0    50   ~ 0
+As the ethernet wings have the 8P8C facing away from the USB connector,\nthe feather footprint should be rotated opposite conventional style
 $EndSCHEMATC

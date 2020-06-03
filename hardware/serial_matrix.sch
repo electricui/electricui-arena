@@ -14,7 +14,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 8900 2450 0    50   ~ 0
+Text Notes 8550 1000 0    50   ~ 0
 The matrix output supplies the\nserial output to a selected target
 $Bitmap
 Pos 2050 4100
@@ -632,7 +632,7 @@ BD AF B6 5F 7D F5 55 A1 50 B8 91 D7 C6 DF E1 EC EC EC EC EC EC B3 CF 3E 5B F5 89
 C3 73 2C CE 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 2250 2500 0    50   ~ 0
+Text Notes 2650 950  0    50   ~ 0
 USB Serial converters\nfeed this side of the matrix
 Wire Bus Line
 	4450 6650 6500 6650
@@ -1493,52 +1493,216 @@ $EndComp
 $Comp
 L appli_connector_wurth:CONN_01X03 P9
 U 1 1 5EDA815F
-P 6300 3000
-F 0 "P9" H 6217 2675 50  0000 C CNN
-F 1 "CONN_01X03" H 6217 2766 50  0000 C CNN
-F 2 "Applidyne_Connector_Wurth:61300311121" V 6475 3000 50  0001 C CNN
-F 3 "" H 6300 2650 50  0001 C CNN
-F 4 "WURTH ELECTRONIK" H 6300 2550 60  0001 C CNN "manf"
-F 5 "61300311121" H 6300 2450 60  0001 C CNN "manf#"
-F 6 "Element 14" H 6300 2350 60  0001 C CNN "Supplier"
-F 7 "2356154" H 6300 2275 60  0001 C CNN "Supplier Part No"
-F 8 "http://au.element14.com/wurth-elektronik/61300311121/header-2-54mm-pin-tht-vertical/dp/2356154" H 6300 2175 60  0001 C CNN "Supplier URL"
-F 9 "0.12" H 6300 2075 60  0001 C CNN "Supplier Price"
-F 10 "1" H 6300 1975 60  0001 C CNN "Supplier Price Break"
-	1    6300 3000
-	1    0    0    1   
+P 6150 2800
+F 0 "P9" V 6350 2800 50  0000 C CNN
+F 1 "CONN_01X03" V 6250 2800 50  0000 C CNN
+F 2 "Applidyne_Connector_Wurth:61300311121" V 6325 2800 50  0001 C CNN
+F 3 "" H 6150 2450 50  0001 C CNN
+F 4 "WURTH ELECTRONIK" H 6150 2350 60  0001 C CNN "manf"
+F 5 "61300311121" H 6150 2250 60  0001 C CNN "manf#"
+F 6 "Element 14" H 6150 2150 60  0001 C CNN "Supplier"
+F 7 "2356154" H 6150 2075 60  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/wurth-elektronik/61300311121/header-2-54mm-pin-tht-vertical/dp/2356154" H 6150 1975 60  0001 C CNN "Supplier URL"
+F 9 "0.12" H 6150 1875 60  0001 C CNN "Supplier Price"
+F 10 "1" H 6150 1775 60  0001 C CNN "Supplier Price Break"
+	1    6150 2800
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	6100 3100 6000 3100
-Wire Wire Line
-	6000 3100 6000 3200
+	6250 3000 6250 3050
 $Comp
 L appli_power:GND #PWR0272
 U 1 1 5EDAE25B
-P 6000 3200
-F 0 "#PWR0272" H 6000 2950 50  0001 C CNN
-F 1 "GND" H 6005 3027 50  0000 C CNN
-F 2 "" H 6000 3200 50  0001 C CNN
-F 3 "" H 6000 3200 50  0001 C CNN
-	1    6000 3200
+P 6250 3050
+F 0 "#PWR0272" H 6250 2800 50  0001 C CNN
+F 1 "GND" H 6255 2877 50  0000 C CNN
+F 2 "" H 6250 3050 50  0001 C CNN
+F 3 "" H 6250 3050 50  0001 C CNN
+	1    6250 3050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6100 2900 5750 2900
-Wire Wire Line
-	5750 2900 5750 2150
 Connection ~ 5750 2150
 Wire Wire Line
 	5750 2150 6900 2150
-Wire Wire Line
-	6100 3000 5750 3000
-Wire Wire Line
-	5750 3000 5750 4550
 Connection ~ 5750 4550
 Wire Wire Line
 	5750 4550 6900 4550
-Text Notes 6000 2600 0    50   ~ 0
+Text Notes 6000 2500 0    50   ~ 0
 DEBUG\nHEADER
+$Comp
+L appli_switch:SN74LVC1G66 U39
+U 1 1 5EE0FB15
+P 9050 3350
+F 0 "U39" H 9050 3837 60  0000 C CNN
+F 1 "SN74LVC1G66" H 9050 3731 60  0000 C CNN
+F 2 "Applidyne_SOT:SOT95P240X110-5L16N" H 9050 2700 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf" H 9100 2825 60  0001 C CNN
+F 4 "TEXAS INSTRUMENTS" H 9100 2585 60  0001 C CNN "manf"
+F 5 "SN74LVC1G66DBVR" H 9110 2475 60  0001 C CNN "manf#"
+F 6 "Mouser" H 9100 2365 60  0001 C CNN "Supplier"
+F 7 "595-SN74LVC1G66DBVR" H 9100 2255 60  0001 C CNN "Supplier Part No"
+F 8 "https://au.mouser.com/ProductDetail/Texas-Instruments/SN74LVC1G66DBVR?qs=pt%2FIv5r0EPcNpRLTEQzKFQ%3D%3D" H 9100 2155 60  0001 C CNN "Supplier URL"
+F 9 "0.43" H 9100 2035 60  0001 C CNN "Supplier Price"
+F 10 "10" H 9110 1925 60  0001 C CNN "Supplier Price Break"
+	1    9050 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 3150 10350 3150
+Wire Wire Line
+	10350 3150 10350 3000
+Wire Wire Line
+	9550 3550 10350 3550
+Wire Wire Line
+	10350 3550 10350 3700
+$Comp
+L appli_power:GND #PWR0185
+U 1 1 5EE1A3CF
+P 10350 3700
+F 0 "#PWR0185" H 10350 3450 50  0001 C CNN
+F 1 "GND" H 10355 3527 50  0000 C CNN
+F 2 "" H 10350 3700 50  0001 C CNN
+F 3 "" H 10350 3700 50  0001 C CNN
+	1    10350 3700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L appli_power:+3.3V #PWR0184
+U 1 1 5EE1A6AE
+P 10350 3000
+AR Path="/5EC860AC/5EE1A6AE" Ref="#PWR0184"  Part="1" 
+AR Path="/608437F9/5EE1A6AE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0184" H 10350 2850 50  0001 C CNN
+F 1 "+3.3V" H 10365 3173 50  0000 C CNN
+F 2 "" H 10350 3000 50  0001 C CNN
+F 3 "" H 10350 3000 50  0001 C CNN
+	1    10350 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L appli_capacitor:100n_X7R_1608M C51
+U 1 1 5EE1B4F5
+P 10350 3450
+F 0 "C51" H 10272 3315 50  0000 R CNN
+F 1 "100n_X7R_1608M" H 10272 3395 35  0000 R CNN
+F 2 "Applidyne_Capacitor:CAPC1608X90N" V 10465 3350 20  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1732728.pdf" V 10490 3350 20  0001 C CNN
+F 4 "KEMET" V 10540 3350 20  0001 C CNN "manf"
+F 5 "C0603C104K5RACAUTO" V 10565 3350 20  0001 C CNN "manf#"
+F 6 "Element14" V 10590 3350 20  0001 C CNN "Supplier"
+F 7 "2070398" V 10615 3350 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/kemet/c0603c104k5racauto/cap-mlcc-x7r-100nf-50v-0603/dp/2070398" V 10640 3350 20  0001 C CNN "Supplier URL"
+F 9 "0.011" V 10665 3350 20  0001 C CNN "Supplier Price"
+F 10 "1" V 10690 3350 20  0001 C CNN "Supplier Price Break"
+	1    10350 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10350 3150 10350 3250
+Connection ~ 10350 3150
+Wire Wire Line
+	10350 3450 10350 3550
+Connection ~ 10350 3550
+$Comp
+L appli_device:LED_YELLOW_1608M D?
+U 1 1 5EE82075
+P 8800 4000
+AR Path="/5EDD185B/5EE82075" Ref="D?"  Part="1" 
+AR Path="/5EE82075" Ref="D?"  Part="1" 
+AR Path="/5EC860AC/5EE82075" Ref="D20"  Part="1" 
+F 0 "D20" H 8800 3755 50  0000 C CNN
+F 1 "LED_YELLOW_1608M" H 8800 3846 50  0000 C CNN
+F 2 "Applidyne_LED:LEDC1608X80L40N" H 8800 4200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1720200.pdf" H 8800 3790 50  0001 C CNN
+F 4 "DIALIGHT" H 8800 3580 60  0001 C CNN "manf"
+F 5 "5988040107F" H 8800 3490 60  0001 C CNN "manf#"
+F 6 "Element 14" H 8800 3390 60  0001 C CNN "Supplier"
+F 7 "1465989" H 8800 3290 60  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/dialight/5988040107f/led-yellow-0-8mm-x-1-1mm-130mcd/dp/1465989" H 8810 3210 60  0001 C CNN "Supplier URL"
+F 9 "0.29" H 8800 3110 60  0001 C CNN "Supplier Price"
+F 10 "10" H 8800 3010 60  0001 C CNN "Supplier Price Break"
+	1    8800 4000
+	1    0    0    1   
+$EndComp
+$Comp
+L appli_resistor:1K00_1608M R?
+U 1 1 5EE82082
+P 9200 4000
+AR Path="/5EDD185B/5EE82082" Ref="R?"  Part="1" 
+AR Path="/5EE82082" Ref="R?"  Part="1" 
+AR Path="/5EC860AC/5EE82082" Ref="R4"  Part="1" 
+F 0 "R4" V 9012 3850 50  0000 C CNN
+F 1 "1K00_1608M" V 9092 3850 35  0000 C CNN
+F 2 "Applidyne_Resistor:RESC1608X50N" V 9310 3850 20  0001 C CNN
+F 3 "" V 9335 3850 20  0001 C CNN
+F 4 "MULTICOMP" V 9385 3850 20  0001 C CNN "manf"
+F 5 "MCHP03W8F1001T5E" V 9410 3850 20  0001 C CNN "manf#"
+F 6 "Element14" V 9435 3850 20  0001 C CNN "Supplier"
+F 7 "1576283" V 9460 3850 20  0001 C CNN "Supplier Part No"
+F 8 "http://au.element14.com/multicomp/mchp03w8f1001t5e/resistor-thick-film-1k-0-125w/dp/1576283" V 9485 3850 20  0001 C CNN "Supplier URL"
+F 9 "0.011" V 9510 3850 20  0001 C CNN "Supplier Price"
+F 10 "50+" V 9535 3850 20  0001 C CNN "Supplier Price Break"
+	1    9200 4000
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	9200 4000 9000 4000
+Wire Wire Line
+	8500 4000 8600 4000
+Text HLabel 9750 3350 2    50   Input ~ 0
+LOOPBACK
+Text Notes 8950 4400 0    50   ~ 0
+Loopback switch connects the muxed RX/TX\nlines. Use INH on collapse or expansion sides \nto provide loopback to UART or DUT sides.
+Wire Wire Line
+	9650 4000 9650 3350
+Wire Wire Line
+	9650 3350 9750 3350
+Wire Wire Line
+	9650 3350 9550 3350
+Connection ~ 9650 3350
+Wire Wire Line
+	9650 4000 9500 4000
+Wire Wire Line
+	8500 4000 8500 4100
+$Comp
+L appli_power:GND #PWR0183
+U 1 1 5F02D551
+P 8500 4100
+F 0 "#PWR0183" H 8500 3850 50  0001 C CNN
+F 1 "GND" H 8505 3927 50  0000 C CNN
+F 2 "" H 8500 4100 50  0001 C CNN
+F 3 "" H 8500 4100 50  0001 C CNN
+	1    8500 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3400 8500 3550
+Wire Wire Line
+	8500 3550 8550 3550
+Wire Wire Line
+	8500 3300 8500 3150
+Wire Wire Line
+	8500 3150 8550 3150
+Wire Wire Line
+	5750 2150 5750 3300
+Wire Wire Line
+	5750 3400 5750 4550
+Wire Wire Line
+	8500 3400 6150 3400
+Wire Wire Line
+	5750 3300 6050 3300
+Wire Wire Line
+	6050 3000 6050 3300
+Connection ~ 6050 3300
+Wire Wire Line
+	6050 3300 8500 3300
+Wire Wire Line
+	6150 3000 6150 3400
+Connection ~ 6150 3400
+Wire Wire Line
+	6150 3400 5750 3400
+Text Notes 9250 2750 0    79   ~ 16
+LOOPBACK
 Wire Bus Line
 	4450 6350 4450 6650
 Wire Bus Line
