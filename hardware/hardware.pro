@@ -66,7 +66,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.051
 SolderMaskMinWidth=0.25
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=-0.1
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
