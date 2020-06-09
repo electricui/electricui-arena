@@ -1,5 +1,11 @@
 # Electric UI CI Arena
-Hardware for continuous integration testing of serial interfaces and microcontrollers with Electric UI.
+Hardware for continuous integration testing of serial interfaces and microcontrollers.
+
+![PCB Render with annotations](images/pcb-annotated.jpg)
+
+The board exposes control to a CI build worker to power up any of the USB-UART adaptors in either loopback mode, or connected to any **one** of the hardware targets for a total test matrix of 72 combinations. 
+
+Intended to run tests for hot-plug detection (by controlling the mux or USB power control), disconnection handling (by re-routing serial to the void) and to validate a wide range of microcontroller architectures and their corresponding toolchains.
 
 ## USB to UART Validation
 
@@ -14,27 +20,31 @@ The following adaptors are used as test adaptors:
 - [CP2012](https://www.adafruit.com/product/954)
 - CH340G
 
+In the future, we hope to add Bluetooth/WiFi adaptors for wireless tests against compatible targets.
+
 ## Microcontroller Validation
 
-8 power-switched targets are supported with connections to hardware serial. The Adafruit Feather specification is used, as a majority of planned targets are available in Feather format.
+8 power-switched targets are supported with connections to hardware serial. The [Adafruit Feather specification](https://learn.adafruit.com/adafruit-feather/feather-specification) is used, as a majority of planned targets are available in Feather format.
 
-The following microcontroller's are used as test devices:
+The following boards are used as test devices:
 
 - [ATMEL 328P](https://www.adafruit.com/product/3458)
 - [ATMEL SAMD21G](https://www.adafruit.com/product/2772)
 - [ST STM32F405](https://www.adafruit.com/product/4382) with CubeHAL
 - [Nordic nRF52840](https://www.adafruit.com/product/4516) 
-- [RISC-V FE310](https://www.sparkfun.com/products/15799) for Zephyr RTOS
+- [RISC-V FE310](https://www.sparkfun.com/products/15799) with Zephyr RTOS
 - [Ambiq Apollo3 ARM-M4F (Sparkfun Artemis)](https://www.sparkfun.com/products/15574) 
 - [Espressif ESP32](https://www.sparkfun.com/products/15663) with ESP-IDF
-- [Teensy 3.2](https://www.pjrc.com/store/teensy32.html) & [Teensy/Feather adaptor](Teensy/Feather adaptor) for Arduino
+- [Teensy 3.2](https://www.pjrc.com/store/teensy32.html) & [Teensy/Feather adaptor](Teensy/Feather adaptor) with Arduino
 
 Test hardware will be flashed with a mix of native 'bare metal' images, and at least one target will act as validation of the Arduino framework.
 
+When populating the test Feather boards with headers, use 'stacking' headers to allow for future sensor/display additions to targets.
+
 # Supervisory Control
 
-A Feather is provided to act as the supervisor. This connects to the CI server using a ethernet featherwing shield.
+An additional Feather is provided to act as the supervisor. This connects to the CI server using a [ethernet featherwing](https://www.adafruit.com/product/3201).
 
-The supervisor controls the power switches to each of the serial adaptors and the test devices, and also has 2 IO lines to each microcontroller to allow for input/output checks.
+The supervisor (through I2C expanders) controls power switches to each of the serial adaptors and test devices, and has 2 IO lines to each microcontroller to allow for input/output checks.
 
-A analog line is shared across all modules, with the intent of using the supervisor's DAC output, allowing additional tests.
+An analog line is shared across all modules, with the intent of using the supervisor's DAC output, allowing additional tests.
