@@ -4,13 +4,13 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 18 20
-Title ""
+Sheet 20 20
+Title "USB Adaptor"
 Date ""
-Rev ""
+Rev "1.0.0"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "CI/CD Testbed"
+Comment2 "ARENA"
 Comment3 ""
 Comment4 ""
 $EndDescr

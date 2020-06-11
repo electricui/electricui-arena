@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 20
-Title ""
+Title "UART Path Routing"
 Date ""
-Rev ""
+Rev "1.0.0"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "CI/CD Testbed"
+Comment2 "ARENA"
 Comment3 ""
 Comment4 ""
 $EndDescr

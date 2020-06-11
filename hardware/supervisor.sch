@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 11 20
-Title ""
+Title "Supervisor Micro"
 Date ""
-Rev ""
+Rev "1.0.0"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "CI/CD Testbed"
+Comment2 "ARENA"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -828,4 +828,11 @@ F 10 "5" H 8900 5035 20  0001 C CNN "Supplier Price Break"
 	1    8900 5500
 	1    0    0    -1  
 $EndComp
+NoConn ~ 4500 4600
+NoConn ~ 4500 4700
+NoConn ~ 4500 4800
+NoConn ~ 4500 4900
+NoConn ~ 4500 5000
+NoConn ~ 4500 5400
+NoConn ~ 4500 5500
 $EndSCHEMATC

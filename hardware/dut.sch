@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 10 20
-Title ""
+Title "Test Device"
 Date "2020-05-17"
-Rev ""
+Rev "1.0.0"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "CI/CD Testbed"
+Comment2 "ARENA"
 Comment3 ""
 Comment4 ""
 $EndDescr

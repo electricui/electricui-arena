@@ -5,12 +5,12 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 20
-Title ""
-Date ""
-Rev ""
+Title "Test Matrix Overview"
+Date "2020-06-11"
+Rev "1.0.0"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "CI/CD Testbed"
+Comment2 "ARENA"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -2152,6 +2152,8 @@ Wire Wire Line
 	10200 6400 9950 6400
 Wire Wire Line
 	3950 8000 5200 8000
+Text Notes 8100 8500 0    98   ~ 20
+A
 Wire Bus Line
 	2550 1800 2550 2900
 Wire Bus Line
@@ -2166,6 +2168,4 @@ Wire Bus Line
 	6200 1250 6200 8350
 Wire Bus Line
 	15900 2150 15900 9200
-Text Notes 8100 8500 0    98   ~ 20
-A
 $EndSCHEMATC

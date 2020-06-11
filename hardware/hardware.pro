@@ -1,4 +1,4 @@
-update=Sat 06 Jun 2020 14:59:31
+update=Thu 11 Jun 2020 23:33:39
 version=1
 last_client=kicad
 [general]
@@ -12,9 +12,19 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[schematic_editor]
+version=1
+PageLayoutDescrFile=/home/scott/projects/electricui/company/templates/kicad/electricui_schematic.kicad_wks
+PlotDirectoryName=output/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
-PageLayoutDescrFile=
+PageLayoutDescrFile=/home/scott/projects/electricui/company/templates/kicad/electricui_pcb.kicad_wks
 LastNetListRead=
 CopperLayerCount=4
 BoardThickness=2
