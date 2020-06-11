@@ -3,7 +3,7 @@ Hardware for continuous integration testing of serial interfaces and microcontro
 
 ![PCB Render with annotations](images/pcb-annotated.jpg)
 
-The board exposes control to a CI build worker to power up any of the USB-UART adaptors in either loopback mode, or connected to any **one** of the hardware targets for a total test matrix of 72 combinations. 
+The board (KiCAD files in `/hardware`) exposes control to a CI build worker to power up any of the USB-UART adaptors in either loopback mode, or connected to any **one** of the hardware targets for a total test matrix of 72 combinations. 
 
 Intended to run tests for hot-plug detection (by controlling the mux or USB power control), disconnection handling (by re-routing serial to the void) and to validate a wide range of microcontroller architectures and their corresponding toolchains.
 
@@ -41,10 +41,24 @@ Test hardware will be flashed with a mix of native 'bare metal' images, and at l
 
 When populating the test Feather boards with headers, use 'stacking' headers to allow for future sensor/display additions to targets.
 
-# Supervisory Control
+## Supervisory Control
 
 An additional Feather is provided to act as the supervisor. This connects to the CI server using a [ethernet featherwing](https://www.adafruit.com/product/3201).
 
 The supervisor (through I2C expanders) controls power switches to each of the serial adaptors and test devices, and has 2 IO lines to each microcontroller to allow for input/output checks.
 
 An analog line is shared across all modules, with the intent of using the supervisor's DAC output, allowing additional tests.
+
+Firmware is in `/firmware`
+
+# Manufacture
+
+- I used JLPCB's 4-layer JLC7628 controlled impedance process.
+- No stencil was ordered, as 2 units with low SMD part count is easy enough to paste by hand.
+- All components were available from Digikey.
+- Microcontroller targets were bought from Sparkfun and Adafruit (via Digikey)
+- Assembled per board costs just under $100AUD.
+- Loaded price (with listed microcontrollers, USB-serial adaptors, supervisor w ethernet) approx $500AUD.
+
+See `/hardware/output/arena-BOM.html` for PCB BOM.
+
