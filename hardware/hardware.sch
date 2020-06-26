@@ -533,11 +533,11 @@ Wire Wire Line
 	13250 7950 13250 8650
 Text Notes 11050 4400 0    98   ~ 20
 2
-Text Notes 11050 5900 0    98   ~ 20
+Text Notes 11050 7450 0    98   ~ 20
 4
 Text Notes 11050 6450 0    98   ~ 20
 3
-Text Notes 11050 7450 0    98   ~ 20
+Text Notes 11050 5850 0    98   ~ 20
 7
 Text Notes 11050 8450 0    98   ~ 20
 8
