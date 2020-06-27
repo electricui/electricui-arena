@@ -634,10 +634,6 @@ EndData
 $EndBitmap
 Text Notes 2650 950  0    50   ~ 0
 USB Serial converters\nfeed this side of the matrix
-Wire Bus Line
-	4450 6650 6500 6650
-Wire Bus Line
-	4450 6250 5650 6250
 Wire Wire Line
 	2100 6650 2250 6650
 Wire Wire Line
@@ -857,38 +853,6 @@ Wire Wire Line
 	5250 2150 5750 2150
 Wire Wire Line
 	5250 4550 5750 4550
-Wire Wire Line
-	3950 6550 4350 6550
-Wire Wire Line
-	3950 6450 4350 6450
-Wire Wire Line
-	3950 6350 4350 6350
-Wire Wire Line
-	3950 6250 4350 6250
-Text Label 4050 5850 0    50   ~ 0
-EXP_I
-Text Label 4050 6150 0    50   ~ 0
-EXP_C
-Text Label 4050 6050 0    50   ~ 0
-EXP_B
-Text Label 4050 5950 0    50   ~ 0
-EXP_A
-Text Label 4050 6550 0    50   ~ 0
-COL_I
-Text Label 4050 6250 0    50   ~ 0
-COL_C
-Text Label 4050 6350 0    50   ~ 0
-COL_B
-Text Label 4050 6450 0    50   ~ 0
-COL_A
-Wire Wire Line
-	3950 6150 4350 6150
-Wire Wire Line
-	3950 6050 4350 6050
-Wire Wire Line
-	3950 5950 4350 5950
-Wire Wire Line
-	3950 5850 4350 5850
 Entry Wire Line
 	6600 2650 6500 2750
 Entry Wire Line
@@ -1703,12 +1667,48 @@ Wire Wire Line
 	6150 3400 5750 3400
 Text Notes 9250 2750 0    79   ~ 16
 LOOPBACK
+Wire Wire Line
+	3950 5850 4350 5850
+Wire Wire Line
+	3950 5950 4350 5950
+Wire Wire Line
+	3950 6050 4350 6050
+Wire Wire Line
+	3950 6150 4350 6150
+Text Label 4050 5950 0    50   ~ 0
+EXP_A
+Text Label 4050 6050 0    50   ~ 0
+EXP_B
+Text Label 4050 6150 0    50   ~ 0
+EXP_C
+Text Label 4050 5850 0    50   ~ 0
+EXP_I
+Text Label 4050 6250 0    50   ~ 0
+COL_C
+Text Label 4050 6450 0    50   ~ 0
+COL_A
+Text Label 4050 6350 0    50   ~ 0
+COL_B
+Text Label 4050 6550 0    50   ~ 0
+COL_I
+Wire Wire Line
+	3950 6250 4350 6250
+Wire Wire Line
+	3950 6350 4350 6350
+Wire Wire Line
+	3950 6450 4350 6450
+Wire Wire Line
+	3950 6550 4350 6550
+Wire Bus Line
+	5650 6650 4450 6650
+Wire Bus Line
+	4450 6250 6500 6250
 Wire Bus Line
 	4450 6350 4450 6650
 Wire Bus Line
 	4450 5950 4450 6250
 Wire Bus Line
-	5650 2450 5650 6250
+	5650 2450 5650 6650
 Wire Bus Line
-	6500 2450 6500 6650
+	6500 2450 6500 6250
 $EndSCHEMATC
