@@ -52,3 +52,11 @@ void select_serial_dut( DUT_NAMES target );
 void power_dut( DUT_NAMES target, bool on );
 
 /* -------------------------------------------------------------------------- */
+
+void power_usb_clear( void );
+
+void select_usb_clear( void );
+
+void power_dut_clear( void );
+
+void select_serial_clear( void );

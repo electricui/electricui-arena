@@ -1,5 +1,6 @@
 #include "mux_control.h"
 #include "io_abstraction.h"
+#include "stdint.h"
 
 // USB Mux ports (order maps the labels against logical channels)
 typedef enum 
@@ -34,7 +35,7 @@ typedef enum
 void select_usb_port( USBPORT_NAMES port )
 {
     // map port to mux
-    if( port <= _NUM_MUX_OPTIONS)
+    if( port <= _NUM_USB_PORTS)
     {
         io_abstraction_write( _IO_USB_C0, port & 0x01 );
         io_abstraction_write( _IO_USB_C1, port & 0x02 );
@@ -65,7 +66,7 @@ void select_serial_source( USBPORT_NAMES port )
 {
     //map port to mux
 
-    if( port <= _NUM_MUX_OPTIONS)
+    if( port <= _NUM_USB_PORTS)
     {
         io_abstraction_write( _IO_MATRIX_COLLAPSE_A, port & 0x01 );
         io_abstraction_write( _IO_MATRIX_COLLAPSE_B, port & 0x02 );
@@ -93,7 +94,7 @@ void enable_serial_loopback( bool on )
 void select_serial_dut( DUT_NAMES target )
 {
     // map target to mux
-    if( target < _NUM_MUX_DUT)
+    if( target < _NUM_DUT)
     {
         io_abstraction_write( _IO_MATRIX_EXPAND_A, target & 0x01 );
         io_abstraction_write( _IO_MATRIX_EXPAND_B, target & 0x02 );
@@ -117,3 +118,30 @@ void power_dut( DUT_NAMES target, bool on )
 }
 
 /* -------------------------------------------------------------------------- */
+
+void power_usb_clear( void )
+{
+    for( uint8_t i = 0; i < _NUM_USB_PORTS; i++)
+    {
+        power_usb_port((USBPORT_NAMES)i, false);
+    }
+}
+
+void select_usb_clear( void )
+{
+    io_abstraction_write( _IO_USB_ENABLE, 0 );
+}
+
+void power_dut_clear( void )
+{
+    for( uint8_t i = 0; i < _NUM_DUT; i++)
+    {
+        power_dut((DUT_NAMES)i, false);
+    }
+}
+
+void select_serial_clear( void )
+{
+    io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 0 );
+    io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 0 );
+}

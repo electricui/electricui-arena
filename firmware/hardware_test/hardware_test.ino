@@ -1,8 +1,9 @@
 #include "io_abstraction.h"
 #include "mux_control.h"
+#include "networking.h"
 
 #define PIN_LED_ONBOARD 13
-#define PIN_BUTTON_0 11
+#define PIN_BUTTON_0 27
 #define PIN_BUTTON_1 12
 
 #define PIN_MCP23008_INT 32
@@ -28,28 +29,11 @@ void setup( void )
 
     setup_pins();
     io_abstraction_setup_pins();
-
-
-    select_usb_port( _PORT_USB_A );
-    power_usb_port( _PORT_USB_A, true );
-
-    select_serial_source( _PORT_USB_A );
-    select_serial_dut( _PORT_DUT_7 );
-    power_dut( _PORT_DUT_7, true );
+    setup_ethernet();
 
 }
 
 void loop( void ) 
 {
-    // Chase the status LEDS
-    io_abstraction_write( _IO_STATUS_RED, true);
-    delay(100);
-    io_abstraction_write( _IO_STATUS_RED, false);
-    io_abstraction_write( _IO_STATUS_YELLOW, true);
-    delay(100);
-    io_abstraction_write( _IO_STATUS_YELLOW, false);
-    io_abstraction_write( _IO_STATUS_GREEN, true);
-    delay(100);
-    io_abstraction_write( _IO_STATUS_GREEN, false);
-    
+    handle_ethernet();
 }

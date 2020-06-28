@@ -83,3 +83,9 @@ void io_abstraction_write( EXP_IO_NAMES gpio, bool state );
 bool io_abstraction_read( EXP_IO_NAMES gpio );
 
 /* -------------------------------------------------------------------------- */
+
+void io_status_red( bool on );
+void io_status_yellow( bool on );
+void io_status_green( bool on );
+
+/* -------------------------------------------------------------------------- */

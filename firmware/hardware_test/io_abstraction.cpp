@@ -126,3 +126,20 @@ bool io_abstraction_read( EXP_IO_NAMES gpio )
 }
 
 /* -------------------------------------------------------------------------- */
+
+void io_status_red( bool on )
+{
+    io_abstraction_write(_IO_STATUS_RED, on);
+}
+
+void io_status_yellow( bool on )
+{
+    io_abstraction_write(_IO_STATUS_YELLOW, on);
+}
+
+void io_status_green( bool on )
+{
+    io_abstraction_write(_IO_STATUS_GREEN, on);
+}
+
+/* -------------------------------------------------------------------------- */
