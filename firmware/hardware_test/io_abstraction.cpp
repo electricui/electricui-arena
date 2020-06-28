@@ -1,6 +1,15 @@
 #include "io_abstraction.h"
 #include "mcp23008.h"
 
+#include "Wire.h"
+
+/* -------------------------------------------------------------------------- */
+
+#define PIN_MCP23008_SDA 23
+#define PIN_MCP23008_SCL 22
+
+/* -------------------------------------------------------------------------- */
+
 // MCP23008 I2C Expanders as listed in schematic
 typedef enum 
 {
@@ -22,6 +31,8 @@ const uint8_t mcp23008_address[ _NUM_EXPANDERS ] =
     [ _EXPANDER_U7 ] = 0x25,    // b0100101
     [ _EXPANDER_U8 ] = 0x22,    // b0100010
 };
+
+/* -------------------------------------------------------------------------- */
 
 typedef struct {
     uint8_t expander;
@@ -87,8 +98,12 @@ const ExternalIOPin_t pins[ _NUM_IO ] =
     [ _IO_STIM_DUT_8_B ] = { .expander = _EXPANDER_U7, .pin = 0 },
 };
 
+/* -------------------------------------------------------------------------- */
+
 void io_abstraction_setup_pins( void )
 {
+    Wire.begin( PIN_MCP23008_SDA, PIN_MCP23008_SCL );   // Specify pins for ESP32
+    Wire.setClock(1700000); // 1.7MHz
 	// Set the default mode for all of our expansion IO
     for( uint8_t i = 0; i < _NUM_IO; i++)
     {
@@ -96,12 +111,18 @@ void io_abstraction_setup_pins( void )
     }
 }
 
+/* -------------------------------------------------------------------------- */
+
 void io_abstraction_write( EXP_IO_NAMES gpio, bool state )
 {
     mcp23008_write_pin(mcp23008_address[pins[gpio].expander], pins[gpio].pin, state);
 }
 
+/* -------------------------------------------------------------------------- */
+
 bool io_abstraction_read( EXP_IO_NAMES gpio )
 {
 	return mcp23008_read_pin(mcp23008_address[pins[gpio].expander], pins[gpio].pin);
 }
+
+/* -------------------------------------------------------------------------- */

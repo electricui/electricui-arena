@@ -28,6 +28,8 @@ typedef enum
     _NUM_MUX_DUT,
 } DUT_MUX_NAMES;
 
+/* -------------------------------------------------------------------------- */
+
 // Configure the mux for the given USB port
 void select_usb_port( USBPORT_NAMES port )
 {
@@ -47,6 +49,8 @@ void select_usb_port( USBPORT_NAMES port )
 
 }
 
+/* -------------------------------------------------------------------------- */
+
 // Provide power to a named USB port
 void power_usb_port( USBPORT_NAMES port, bool on )
 {
@@ -54,6 +58,7 @@ void power_usb_port( USBPORT_NAMES port, bool on )
 }
 
 
+/* -------------------------------------------------------------------------- */
 
 // Configure the UART switching matrix to route from 
 void select_serial_source( USBPORT_NAMES port )
@@ -75,10 +80,14 @@ void select_serial_source( USBPORT_NAMES port )
 
 }
 
+/* -------------------------------------------------------------------------- */
+
 void enable_serial_loopback( bool on )
 {
     io_abstraction_write( _IO_MATRIX_LOOPBACK, on );
 }
+
+/* -------------------------------------------------------------------------- */
 
 // Configure the UART switching matrix to route towards 
 void select_serial_dut( DUT_NAMES target )
@@ -99,8 +108,12 @@ void select_serial_dut( DUT_NAMES target )
 
 }
 
+/* -------------------------------------------------------------------------- */
+
 // Provide power to one of the numbered feather device ports
 void power_dut( DUT_NAMES target, bool on )
 {
     io_abstraction_write( (EXP_IO_NAMES)(_IO_PWR_DUT_1 + target), on );
 }
+
+/* -------------------------------------------------------------------------- */

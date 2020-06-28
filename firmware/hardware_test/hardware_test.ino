@@ -1,4 +1,3 @@
-#include "Wire.h"
 #include "io_abstraction.h"
 #include "mux_control.h"
 
@@ -8,8 +7,7 @@
 
 #define PIN_MCP23008_INT 32
 #define PIN_MCP23008_RESET 14
-#define PIN_MCP23008_SDA 23
-#define PIN_MCP23008_SCL 22
+
 
 void setup_pins( void )
 {
@@ -27,11 +25,8 @@ void setup_pins( void )
 void setup( void ) 
 {
     Serial.begin(115200);
+
     setup_pins();
-
-    Wire.begin( PIN_MCP23008_SDA, PIN_MCP23008_SCL );   // Specify pins for ESP32
-    Wire.setClock(1700000); // 1.7MHz
-
     io_abstraction_setup_pins();
 
 
@@ -58,4 +53,3 @@ void loop( void )
     io_abstraction_write( _IO_STATUS_GREEN, false);
     
 }
-
