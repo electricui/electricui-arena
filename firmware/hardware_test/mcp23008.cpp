@@ -61,20 +61,20 @@ mcp23008_init_as_output_pp( const uint8_t addr, const uint8_t pin, const bool in
 void
 mcp23008_init(  const uint8_t addr,
                 const uint8_t pin,
-                const uint8_t mode,
+                const MCP23008_IO_MODES mode,
                 const bool   initial_state )
 {
     switch( mode )
     {
-        case INPUT:
+        case _MCP23008_MODE_INPUT:
             mcp23008_init_as_input( addr, pin );
             break;
 
-        case INPUT_PULLUP:
+        case _MCP23008_MODE_INPUT_PU:
             mcp23008_init_as_input_with_pullup( addr, pin );
             break;
 
-        case OUTPUT:
+        case _MCP23008_MODE_OUTPUT:
             mcp23008_init_as_output_pp( addr, pin, initial_state );
             break;
     }

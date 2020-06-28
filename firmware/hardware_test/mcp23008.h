@@ -1,5 +1,13 @@
 #include "stdint.h"
 
+/* -------------------------------------------------------------------------- */
+
+typedef enum 
+{
+    _MCP23008_MODE_INPUT = 0,
+    _MCP23008_MODE_INPUT_PU,
+    _MCP23008_MODE_OUTPUT,
+} MCP23008_IO_MODES;
 
 /* -------------------------------------------------------------------------- */
 
@@ -8,7 +16,7 @@
 void
 mcp23008_init(  const uint8_t addr,
                 const uint8_t pin,
-                const uint8_t mode,
+                const MCP23008_IO_MODES mode,
                	const bool	 initial_state );
 
 /* -------------------------------------------------------------------------- */
