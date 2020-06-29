@@ -33,13 +33,13 @@ restHelper restServer;
 
 /* -------------------------------------------------------------------------- */
 
+static void network_send_response( const char * resp );
+
+/* -------------------------------------------------------------------------- */
+
 void restHelper::processPostType(const char * key, const byte flags)
 {
-    println("HTTP/1.1 200 OK");
-    println("Content-Type: text/plain\n"
-        "Connection: close\n"
-        "Server: HTTPserver/1.0.0 (Arduino)");
-    println();  // end of headers
+
 }
 
 void restHelper::processPathname(const char * key, const byte flags)
@@ -65,6 +65,18 @@ void restHelper::processGetArgument(const char * key, const char * value, const 
 void restHelper::processPostArgument(const char * key, const char * value, const byte flags)
 {
     supervisor_parse_post(key, value);
+
+/* -------------------------------------------------------------------------- */
+
+static void network_send_response( const char * resp )
+{
+    server.print("HTTP/1.1 "); 
+    server.println(resp);
+
+    server.println("Content-Type: text/plain\n"
+            "Connection: close\n"
+            "Server: HTTPserver/1.0.0 (Arduino)" );
+    server.println();  // end of headers
 }
 
 /* -------------------------------------------------------------------------- */
@@ -123,7 +135,6 @@ void handle_ethernet( void )
                 restServer.processIncomingByte( client.read() );
             }
 
-            delay(10);
             // do other stuff here
 
         }

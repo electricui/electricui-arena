@@ -1,9 +1,11 @@
 #include "io_abstraction.h"
 #include "mux_control.h"
+
 #include "string.h"
+#include <stdint.h>
 
-
-typedef enum {
+typedef enum 
+{
 	_REQUEST_ADAPTER,
 	_REQUEST_TARGET,
 	_REQUEST_LOOPBACK,
@@ -16,27 +18,29 @@ RequestedHWGroup pending_request;
 
 /* -------------------------------------------------------------------------- */
 
-void supervisor_parse_path(const char * path)
+bool supervisor_parse_path(const char * path)
 {
 	pending_request = _REQUEST_INVALID;
 
-    if (strcmp (path, "/adapter") == 0)
+    if(strcmp(path, "/adapter") == 0)
     {
     	pending_request = _REQUEST_ADAPTER;
     }
-    else if (strcmp (path, "/target") == 0)
+    else if(strcmp(path, "/target") == 0)
     {
     	pending_request = _REQUEST_TARGET;
     }
-    else if (strcmp (path, "/loopback") == 0)
+    else if(strcmp(path, "/loopback") == 0)
     {
     	pending_request = _REQUEST_LOOPBACK;
     }
+
+    return (pending_request != _REQUEST_INVALID);
 }
 
 /* -------------------------------------------------------------------------- */
 
-void supervisor_parse_post(const char * key, const char * value)
+bool supervisor_parse_post(const char * key, const char * value)
 {
 	switch(pending_request)
 	{
@@ -137,7 +141,7 @@ void supervisor_parse_post(const char * key, const char * value)
 
 /* -------------------------------------------------------------------------- */
 
-void supervisor_parse_get(const char * key, const char * value)
+bool supervisor_parse_get(const char * key, const char * value)
 {
 
 }

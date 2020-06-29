@@ -159,7 +159,7 @@ mcp23008_register_write( const uint8_t i2c_address,
     Wire.write( i2c_value );
     Wire.endTransmission();
 
-    Wire.requestFrom( i2c_address, 1 );
+    Wire.requestFrom( i2c_address, 1, true );
 
     return Wire.read();
 }
@@ -178,7 +178,7 @@ mcp23008_register_read( const uint8_t i2c_address,
     Wire.write( i2c_register );
     Wire.endTransmission();
 
-    Wire.requestFrom( i2c_address, 1 );
+    Wire.requestFrom( i2c_address, 1, true );
     value = Wire.read();
 
     return value;
