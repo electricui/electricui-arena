@@ -16,6 +16,39 @@ typedef enum
 
 RequestedHWGroup pending_request;
 
+
+typedef struct 
+{
+	uint8_t index;
+	char name[2];
+	char description[16];
+} named_hardware;
+
+named_hardware adapters[] = 
+{
+	{ _PORT_USB_A, "a", "ft232" },
+	{ _PORT_USB_B, "b", "cp2012" },
+	{ _PORT_USB_C, "c", "ch340" },
+	{ _PORT_USB_D, "d", "pl232" },
+	{ _PORT_USB_E, "e", "" },
+	{ _PORT_USB_F, "f", "" },
+	{ _PORT_USB_G, "g", "" },
+	{ _PORT_USB_H, "h", "" },
+
+};
+
+named_hardware targets[] = 
+{
+	{ _PORT_DUT_1, "1", "riscv" },
+	{ _PORT_DUT_2, "2", "apollo3" },
+	{ _PORT_DUT_3, "3", "esp32" },
+	{ _PORT_DUT_4, "4", "teensy" },
+	{ _PORT_DUT_5, "5", "stm32" },
+	{ _PORT_DUT_6, "6", "nrf52" },
+	{ _PORT_DUT_7, "7", "samd21" },
+	{ _PORT_DUT_8, "8", "avr" },
+};
+
 /* -------------------------------------------------------------------------- */
 
 bool supervisor_parse_path(const char * path)
@@ -44,99 +77,102 @@ bool supervisor_parse_post(const char * key, const char * value)
 {
 	switch(pending_request)
 	{
-		case _REQUEST_ADAPTER:
+		case _REQUEST_ADAPTER: // Configure the USB Mux, Serial routing matrix, and power on the USB device
+		{
 			power_usb_clear();
 			select_usb_clear();
 
-			// Configure the USB Mux, Serial routing matrix, and power on the USB device
+			USBPORT_NAMES requested_adapter = _NUM_USB_PORTS;
 
-			if (strcmp (key, "ft232") == 0)
-		    {
-		    	select_usb_port(_PORT_USB_A);
-		    	select_serial_source(_PORT_USB_A);
-		    	power_usb_port(_PORT_USB_A, true);
-		    }
-		    else if (strcmp (key, "cp2012") == 0)
-		    {
-		    	select_usb_port(_PORT_USB_E);
-		    	select_serial_source(_PORT_USB_E);
-		    	power_usb_port(_PORT_USB_E, true);
-		    }
-		    else if (strcmp (key, "ch340") == 0)
-		    {
-		    	select_usb_port(_PORT_USB_B);
-		    	select_serial_source(_PORT_USB_B);
-		    	power_usb_port(_PORT_USB_B, true);
-		    }
-		    else if (strcmp (key, "pl233") == 0)
-		    {
-		    	select_usb_port(_PORT_USB_F);
-		    	select_serial_source(_PORT_USB_F);
-		    	power_usb_port(_PORT_USB_F, true);
-		    }
+			for( uint8_t i = 0; i < 8; i++)
+			{
+				// Check if the request uses an explicit location on the board (A-H)
+				if( strcmp(key, (char*)adapters[i].name) == 0 )
+				{
+					requested_adapter = (USBPORT_NAMES)adapters[i].index;
+					break;
+				}
+
+				// Check if the request uses a human friendly name for their requested hardware
+				if( strcmp(key, (char*)adapters[i].description) == 0 )
+				{
+					requested_adapter = (USBPORT_NAMES)adapters[i].index;
+					break;
+				}
+			}
+
+			if( requested_adapter < _NUM_USB_PORTS )
+			{
+				select_usb_port( requested_adapter );
+				select_serial_source( requested_adapter);
+				power_usb_port( requested_adapter, true);
+
+				return 1;
+			}
+			else
+			{
+				// Failed to find a valid adapter
+				return 0;
+			}
+		}
 		break;
 
 		case _REQUEST_TARGET:
+		{
 			power_dut_clear();
 			select_serial_clear();
 
 			// Configure the serial routing matrix, power on the target device
+			DUT_NAMES requested_device = _NUM_DUT;
 
-			if (strcmp (key, "riscv") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_1);
-		    	power_dut(_PORT_DUT_1,true);
-		    }
-		    else if (strcmp (key, "apollo3") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_2);
-		    	power_dut(_PORT_DUT_2,true);
-		    }
-		    else if (strcmp (key, "esp32") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_3);
-		    	power_dut(_PORT_DUT_3,true);
-		    }
-		    else if (strcmp (key, "teensy") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_4);
-		    	power_dut(_PORT_DUT_4,true);
-		    }
-		    else if (strcmp (key, "stm32") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_5);
-		    	power_dut(_PORT_DUT_5,true);
-		    }
-		    else if (strcmp (key, "nrf52") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_6);
-		    	power_dut(_PORT_DUT_6,true);
-		    }
-		    else if (strcmp (key, "samd21") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_7);
-		    	power_dut(_PORT_DUT_7,true);
-		    }
-		    else if (strcmp (key, "avr") == 0)
-		    {
-		    	select_serial_dut(_PORT_DUT_8);
-		    	power_dut(_PORT_DUT_8,true);
-		    }
+			for( uint8_t i = 0; i < 8; i++)
+			{
+				// Check if the request uses an explicit location on the board (A-H)
+				if( strcmp(key, (char*)targets[i].name) == 0 )
+				{
+					requested_device = (DUT_NAMES)targets[i].index;
+					break;
+				}
+
+				// Check if the request uses a human friendly name for their requested hardware
+				if( strcmp(key, (char*)targets[i].description) == 0 )
+				{
+					requested_device = (DUT_NAMES)targets[i].index;
+					break;
+				}
+			}
+
+			if( requested_device < _NUM_DUT )
+			{
+				select_serial_dut( requested_device );
+		    	power_dut( requested_device, true );
+
+		    	return 1;
+			}
+			else
+			{
+				// Failed to find a valid target
+				return 0;
+			}
+		}
 		break;
 
 		case _REQUEST_LOOPBACK:
 			// Control the loopback switch and disable the device matrix routing
 			// check if key is 0 or 1
 			// enable_serial_loopback();
+			return 1;
+
 		break;
 
 		case _REQUEST_IO:
 			// Manipulate the IO lines for the target
+			return 1;
 
 		break;
 	}
 
-
+	return 0;
 }
 
 /* -------------------------------------------------------------------------- */
