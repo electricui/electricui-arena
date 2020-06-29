@@ -44,7 +44,11 @@ void restHelper::processPostType(const char * key, const byte flags)
 
 void restHelper::processPathname(const char * key, const byte flags)
 {
-    supervisor_parse_path(key);
+    if( !supervisor_parse_path(key) )
+    {
+        network_send_response("500 Internal Server Error");
+        server.print("Invalid route requested: "); server.println(key);
+    }
 }
 
 void restHelper::processHttpVersion(const char * key, const byte flags)
@@ -59,12 +63,31 @@ void restHelper::processHeaderArgument(const char * key, const char * value, con
 
 void restHelper::processGetArgument(const char * key, const char * value, const byte flags)
 {
-    supervisor_parse_post(key, value);
+    if( supervisor_parse_get(key, value) )
+    {
+        network_send_response("200 OK");
+        server.println(key);
+    }
+    else
+    {
+        network_send_response("500 Internal Server Error");
+        server.print("GET Parse Error: "); server.println(key);
+    }
 }
 
 void restHelper::processPostArgument(const char * key, const char * value, const byte flags)
 {
-    supervisor_parse_post(key, value);
+    if( supervisor_parse_post(key, value) )
+    {
+        network_send_response("200 OK");
+        server.println(key);
+    }
+    else
+    {
+        network_send_response("500 Internal Server Error");
+        server.print("POST Parse Error: "); server.println(key);
+    }
+}
 
 /* -------------------------------------------------------------------------- */
 
