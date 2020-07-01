@@ -88,6 +88,11 @@ void enable_serial_loopback( bool on )
     io_abstraction_write( _IO_MATRIX_LOOPBACK, on );
 }
 
+bool get_serial_loopback( void )
+{
+    return io_abstraction_read( _IO_MATRIX_LOOPBACK );
+}
+
 /* -------------------------------------------------------------------------- */
 
 // Configure the UART switching matrix to route towards 

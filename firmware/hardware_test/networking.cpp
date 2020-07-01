@@ -63,10 +63,12 @@ void restHelper::processHeaderArgument(const char * key, const char * value, con
 
 void restHelper::processGetArgument(const char * key, const char * value, const byte flags)
 {
-    if( supervisor_parse_get(key, value) )
+    char * response = supervisor_parse_get(key, value);
+
+    if( response != NULL )
     {
         network_send_response("200 OK");
-        server.println(key);
+        server.println(response);
     }
     else
     {
@@ -77,10 +79,12 @@ void restHelper::processGetArgument(const char * key, const char * value, const 
 
 void restHelper::processPostArgument(const char * key, const char * value, const byte flags)
 {
-    if( supervisor_parse_post(key, value) )
+    const char * response = supervisor_parse_post(key, value);
+
+    if( response != NULL )
     {
         network_send_response("200 OK");
-        server.println(key);
+        server.println(response);
     }
     else
     {
