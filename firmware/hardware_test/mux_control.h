@@ -43,6 +43,8 @@ void select_serial_source( USBPORT_NAMES port );
 
 void enable_serial_loopback( bool on );
 
+bool get_serial_loopback( void );
+
 /* -------------------------------------------------------------------------- */
 
 void select_serial_dut( DUT_NAMES target );

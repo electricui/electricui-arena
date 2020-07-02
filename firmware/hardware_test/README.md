@@ -30,3 +30,43 @@ Uses the [EthernetBonjour](https://github.com/TrippyLighting/EthernetBonjour) li
 ### HTTP/REST
 
 This [HTTPserver](https://github.com/nickgammon/HTTPserver) library makes handling the REST style API a bit less painful.
+
+
+
+# API Documentation
+
+Valid requests will return as `200 OK`, with relevant text in the body, typically echoing the request.
+
+If an invalid request is made, a `500 Internal Server Error` will be returned with some debug text in the body.
+
+All data for GET or POST is assumed to be string formatted.
+
+## Requests
+
+Purely used to query the board for information.
+
+| GET URL                     | Description                                          | Response                                            |
+| --------------------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| `arena.local/loopback?`     | Serial Matrix Loopback enabled                       | `true`/`false`                                      |
+| `arena.local/adapter?`      | List the stored human-friendly USB adapters          | `a, ftdi`<br />`b, cp2012`<br />...<br />`h, pl232` |
+| `arena.local/adapter?b`     | Human-friendly name of a specified adapter           | ch340                                               |
+| `arena.local/adapter?ch340` | Board labelled name of a human-readable adapter name | `b`                                                 |
+| `arena.local/target?`       | List the stored human-friendly device names          | `1, riscv`<br />`2, stm32`<br />...<br />`8, avr`   |
+| `arena.local/target?2`      | Human-friendly name of a specified target            | `stm32`                                             |
+| `arena.local/target?stm32`  | Board labelled name of a human-readable target name  | `2`                                                 |
+
+## Control
+
+HTTP POST are used to set the active adapter, target, and loopback mode. The data/payload is assumed to be string formatted.
+
+When setting a target or adapter, the firmware will automatically setup the relevant side of the USB mux, power control, and serial matrix routing as required.
+
+| POST URL               | Data  | Description                                                 | Response |
+| ---------------------- | ----- | ----------------------------------------------------------- | -------- |
+| `arena.local/adapter`  | ft232 | Select the active USB Serial adapter by human-readable name | ft232    |
+| `arena.local/adapter`  | a     | Select the active USB Serial adapter by board-label         | a        |
+| `arena.local/target`   | stm32 | Select the active test device by human-readable name        | stm32    |
+| `arena.local/target`   | 3     | Select the active test device by board-label                | 3        |
+| `arena.local/loopback` | true  | Enable the serial loopback switch                           | true     |
+| `arena.local/loopback` | false | Disable the serial loopback switch                          | false    |
+
