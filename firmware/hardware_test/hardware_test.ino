@@ -1,6 +1,7 @@
 #include "io_abstraction.h"
 #include "mux_control.h"
 #include "networking.h"
+#include "supervisor.h"
 
 #define PIN_LED_ONBOARD 13
 #define PIN_BUTTON_0 27
@@ -29,6 +30,7 @@ void setup( void )
 
     setup_pins();
     io_abstraction_setup_pins();
+    supervisor_load_configuration();
     setup_ethernet();
 
 }

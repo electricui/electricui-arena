@@ -5,6 +5,9 @@
 #include <stdint.h>
 #include <stdio.h>
 
+// Specifically for ESP32 - replace with EEPROM implementation if porting to another platform
+#include <Preferences.h>
+
 typedef enum 
 {
     _REQUEST_ADAPTER,
@@ -29,10 +32,10 @@ typedef struct
 
 named_hardware adapters[] = 
 {
-    { _PORT_USB_A, "a", "ft232" },
-    { _PORT_USB_B, "b", "cp2012" },
-    { _PORT_USB_C, "c", "ch340" },
-    { _PORT_USB_D, "d", "pl232" },
+    { _PORT_USB_A, "a", "" },
+    { _PORT_USB_B, "b", "" },
+    { _PORT_USB_C, "c", "" },
+    { _PORT_USB_D, "d", "" },
     { _PORT_USB_E, "e", "" },
     { _PORT_USB_F, "f", "" },
     { _PORT_USB_G, "g", "" },
@@ -42,17 +45,56 @@ named_hardware adapters[] =
 
 named_hardware targets[] = 
 {
-    { _PORT_DUT_1, "1", "riscv" },
-    { _PORT_DUT_2, "2", "apollo3" },
-    { _PORT_DUT_3, "3", "esp32" },
-    { _PORT_DUT_4, "4", "teensy" },
-    { _PORT_DUT_5, "5", "stm32" },
-    { _PORT_DUT_6, "6", "nrf52" },
-    { _PORT_DUT_7, "7", "samd21" },
-    { _PORT_DUT_8, "8", "avr" },
+    { _PORT_DUT_1, "1", "" },
+    { _PORT_DUT_2, "2", "" },
+    { _PORT_DUT_3, "3", "" },
+    { _PORT_DUT_4, "4", "" },
+    { _PORT_DUT_5, "5", "" },
+    { _PORT_DUT_6, "6", "" },
+    { _PORT_DUT_7, "7", "" },
+    { _PORT_DUT_8, "8", "" },
 };
 
 char buf[1024] = "";
+
+Preferences prefs;
+
+/* -------------------------------------------------------------------------- */
+
+// Load the human-friendly names for adapters and targets
+void
+supervisor_load_configuration( void )
+{
+    prefs.begin("arena_config", false);
+
+    uint32_t valid_data = prefs.getUInt("valid", 0);
+
+    if( !valid_data )
+    {
+        // Write out the default layout for a fresh device
+        supervisor_save_configuration();
+        preferences.putUInt("valid", 1);
+    }
+    else
+    {
+        prefs.getBytes("adapters", adapters, sizeof(adapters));
+        prefs.getBytes("targets", targets, sizeof(targets));
+    }
+
+    prefs.end();
+}
+
+// Save the current human-friendly <-> board label naming
+void
+supervisor_save_configuration( void )
+{
+    prefs.begin("arena_config", false);
+
+    prefs.putBytes("adapters", adapters, sizeof(adapters));
+    prefs.getBytes("targets", targets, sizeof(targets));
+
+    prefs.end();
+}
 
 /* -------------------------------------------------------------------------- */
 
