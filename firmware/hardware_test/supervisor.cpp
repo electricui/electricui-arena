@@ -1,12 +1,20 @@
+#include "supervisor.h"
+
 #include "io_abstraction.h"
 #include "mux_control.h"
 
-#include "string.h"
+/* -------------------------------------------------------------------------- */
+
+#include <string.h>
 #include <stdint.h>
 #include <stdio.h>
 
 // Specifically for ESP32 - replace with EEPROM implementation if porting to another platform
 #include <Preferences.h>
+
+/* -------------------------------------------------------------------------- */
+
+#define DESCRIPTION_LENGTH_MAX 16
 
 typedef enum 
 {
@@ -27,7 +35,7 @@ typedef struct
 {
     uint8_t index;
     char name[2];
-    char description[16];
+    char description[DESCRIPTION_LENGTH_MAX];
 } named_hardware;
 
 named_hardware adapters[] = 
@@ -55,6 +63,8 @@ named_hardware targets[] =
     { _PORT_DUT_8, "8", "" },
 };
 
+char board_name[DESCRIPTION_LENGTH_MAX] = "Arena Testbed";
+
 char buf[1024] = "";
 
 Preferences prefs;
@@ -71,14 +81,22 @@ supervisor_load_configuration( void )
 
     if( !valid_data )
     {
+        prefs.clear();
+
         // Write out the default layout for a fresh device
-        supervisor_save_configuration();
-        preferences.putUInt("valid", 1);
+        prefs.putBytes("adapters", adapters, sizeof(adapters));
+        prefs.putBytes("targets", targets, sizeof(targets));
+        prefs.putBytes("name", board_name, sizeof(board_name));
+
+        valid_data = 1;
+        prefs.putUInt("valid", valid_data);
     }
     else
     {
         prefs.getBytes("adapters", adapters, sizeof(adapters));
         prefs.getBytes("targets", targets, sizeof(targets));
+        prefs.getBytes("name", board_name, sizeof(board_name));
+
     }
 
     prefs.end();
@@ -88,10 +106,9 @@ supervisor_load_configuration( void )
 void
 supervisor_save_configuration( void )
 {
-    prefs.begin("arena_config", false);
-
     prefs.putBytes("adapters", adapters, sizeof(adapters));
-    prefs.getBytes("targets", targets, sizeof(targets));
+    prefs.putBytes("targets", targets, sizeof(targets));
+    prefs.putBytes("name", board_name, sizeof(board_name));
 
     prefs.end();
 }
@@ -164,11 +181,23 @@ supervisor_parse_post( const char * key, const char * value )
 
             if( requested_adapter < _NUM_USB_PORTS )
             {
-                select_usb_port( requested_adapter );
-                select_serial_source( requested_adapter);
-                power_usb_port( requested_adapter, true);
+                // User is trying to teach a new name
+                if( strlen(value) )
+                {
+                    // Copy up to the description string length from the request
+                    strncpy( adapters[requested_adapter].description, value, DESCRIPTION_LENGTH_MAX );
+                    supervisor_save_configuration();
 
-                return "Set USB port";
+                    return "Adapter name set";
+                }
+                else
+                {
+                    select_usb_port( requested_adapter );
+                    select_serial_source( requested_adapter);
+                    power_usb_port( requested_adapter, true);
+
+                    return "Selected adapter";
+                }
             }
         }
         break;
@@ -197,15 +226,25 @@ supervisor_parse_post( const char * key, const char * value )
                     break;
                 }
             }
-
+           
             if( requested_device < _NUM_DUT )
             {
-                select_serial_dut( requested_device );
-                power_dut( requested_device, true );
+                // User is trying to teach a new name
+                if( strlen(value) )
+                {
+                    // Copy up to the description string length from the request
+                    strncpy( targets[requested_device].description, value, DESCRIPTION_LENGTH_MAX );
+                    supervisor_save_configuration();
 
-                return "Valid";
+                    return "Device name set";
+                }
+                else
+                {
+                    select_serial_dut( requested_device );
+                    power_dut( requested_device, true );
+                    return "Selected DUT";
+                }
             }
-
         }
         break;
 
@@ -231,9 +270,17 @@ supervisor_parse_post( const char * key, const char * value )
             return "TODO IO Request";
 
         case _REQUEST_CONFIG:
-            // Manipulate the IO lines for the target
-            return "TODO CONFIG";
+            // Allow user-configurable stored board-identifier string
+            if( strcmp(key, "name") == 0 )
+            {
+                if( strlen(value) )
+                {
+                    strncpy( board_name, value, DESCRIPTION_LENGTH_MAX );
+                    supervisor_save_configuration();
 
+                    return "Board name set";
+                }
+            }
         break;
     }
 
@@ -373,6 +420,14 @@ supervisor_parse_get( const char * key, const char * value )
             }
             
             return "false";
+        break;
+
+        case _REQUEST_CONFIG:
+            if( strcmp(key, "name") == 0 )
+            {
+                return board_name;
+            }
+
         break;
 
     }
