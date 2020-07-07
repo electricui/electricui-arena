@@ -196,7 +196,8 @@ supervisor_parse_post( const char * key, const char * value )
                     select_serial_source( requested_adapter);
                     power_usb_port( requested_adapter, true);
 
-                    return "Selected adapter";
+                    strncpy(buf, key, sizeof(buf));
+                    return buf; //echo back their setting as confirmation
                 }
             }
         }
@@ -242,7 +243,8 @@ supervisor_parse_post( const char * key, const char * value )
                 {
                     select_serial_dut( requested_device );
                     power_dut( requested_device, true );
-                    return "Selected DUT";
+                    strncpy(buf, key, sizeof(buf));
+                    return buf;
                 }
             }
         }
