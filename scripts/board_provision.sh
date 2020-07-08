@@ -10,8 +10,8 @@ curl -X POST -d a=ft232 $BOARD_URL/adapter
 curl -X POST -d b=cp2012 $BOARD_URL/adapter
 # curl -X POST -d c=aaa $BOARD_URL/adapter
 # curl -X POST -d d=aaa $BOARD_URL/adapter
-curl -X POST -d e=ch340 $BOARD_URL/adapter
-curl -X POST -d f=pl232 $BOARD_URL/adapter
+curl -X POST -d e=hl340 $BOARD_URL/adapter
+curl -X POST -d f=pl2303 $BOARD_URL/adapter
 # curl -X POST -d g=aaa $BOARD_URL/adapter
 # curl -X POST -d h=aaa $BOARD_URL/adapter
 
