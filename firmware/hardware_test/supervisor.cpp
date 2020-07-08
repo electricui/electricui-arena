@@ -106,6 +106,8 @@ supervisor_load_configuration( void )
 void
 supervisor_save_configuration( void )
 {
+    prefs.begin("arena_config", false);
+
     prefs.putBytes("adapters", adapters, sizeof(adapters));
     prefs.putBytes("targets", targets, sizeof(targets));
     prefs.putBytes("name", board_name, sizeof(board_name));

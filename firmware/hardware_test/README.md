@@ -51,7 +51,7 @@ Purely used to query the board for information.
 | --------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
 | `arena.local/loopback?`     | Serial Matrix Loopback enabled                       | `true`/`false`                                               |
 | `arena.local/adapter?`      | List the stored human-friendly USB adapters          | `a, ftdi`<br />`b, cp2012`<br />...<br />`h, pl232`          |
-| `arena.local/adapter?b`     | Human-friendly name of a specified adapter           | ch340                                                        |
+| `arena.local/adapter?b`     | Human-friendly name of a specified adapter           | `ch340`                                                      |
 | `arena.local/adapter?ch340` | Board labelled name of a human-readable adapter name | `b`                                                          |
 | `arena.local/target?`       | List the stored human-friendly device names          | `1, riscv`<br />`2, stm32`<br />...<br />`8, avr`            |
 | `arena.local/target?2`      | Human-friendly name of a specified target            | `stm32`                                                      |
