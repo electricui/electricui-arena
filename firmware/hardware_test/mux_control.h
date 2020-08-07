@@ -55,10 +55,10 @@ void power_dut( DUT_NAMES target, bool on );
 
 /* -------------------------------------------------------------------------- */
 
-void power_usb_clear( void );
+void clear_usb_power( void );
 
-void select_usb_clear( void );
+void clear_usb_selection( void );
 
-void power_dut_clear( void );
+void clear_dut_power( void );
 
-void select_serial_clear( void );
+void clear_dut_selection( void );

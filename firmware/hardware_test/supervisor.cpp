@@ -159,8 +159,8 @@ supervisor_parse_post( const char * key, const char * value )
     {
         case _REQUEST_ADAPTER: // Configure the USB Mux, Serial routing matrix, and power on the USB device
         {
-            power_usb_clear();
-            select_usb_clear();
+            clear_usb_power();
+            clear_usb_selection();
 
             USBPORT_NAMES requested_adapter = _NUM_USB_PORTS;
 
@@ -207,8 +207,8 @@ supervisor_parse_post( const char * key, const char * value )
 
         case _REQUEST_TARGET:
         {
-            power_dut_clear();
-            select_serial_clear();
+            clear_dut_power();
+            clear_dut_selection();
 
             // Configure the serial routing matrix, power on the target device
             DUT_NAMES requested_device = _NUM_DUT;
@@ -245,6 +245,7 @@ supervisor_parse_post( const char * key, const char * value )
                 {
                     select_serial_dut( requested_device );
                     power_dut( requested_device, true );
+                    
                     strncpy(buf, key, sizeof(buf));
                     return buf;
                 }

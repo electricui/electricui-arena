@@ -71,7 +71,6 @@ power_usb_port( USBPORT_NAMES port, bool on )
     io_abstraction_write( (EXP_IO_NAMES)(_IO_PWR_USB_A + port), on );
 }
 
-
 /* -------------------------------------------------------------------------- */
 
 // Configure the UART switching matrix to route from 
@@ -87,11 +86,11 @@ select_serial_source( USBPORT_NAMES port )
         io_abstraction_write( _IO_MATRIX_COLLAPSE_B, mux_val & 0x02 );
         io_abstraction_write( _IO_MATRIX_COLLAPSE_C, mux_val & 0x04 );
 
-        io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 1 );
+        io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 0 );
     }
     else
     {
-        io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 0 );
+        io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 1 );
     }
 
 }
@@ -118,7 +117,6 @@ select_serial_dut( DUT_NAMES target )
 {
     DUT_MUX_NAMES matrix_val = dut_port_mux_mapping(target);
 
-
     // map target to mux
     if( target < _NUM_DUT)
     {
@@ -126,11 +124,11 @@ select_serial_dut( DUT_NAMES target )
         io_abstraction_write( _IO_MATRIX_EXPAND_B, matrix_val & 0x02 );
         io_abstraction_write( _IO_MATRIX_EXPAND_C, matrix_val & 0x04 );
 
-        io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 1 );
+        io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 0 );
     }
     else
     {
-        io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 0 );
+        io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 1 );
     }
 
 }
@@ -147,7 +145,7 @@ power_dut( DUT_NAMES target, bool on )
 /* -------------------------------------------------------------------------- */
 
 void
-power_usb_clear( void )
+clear_usb_power( void )
 {
     for( uint8_t i = 0; i < _NUM_USB_PORTS; i++)
     {
@@ -156,13 +154,14 @@ power_usb_clear( void )
 }
 
 void
-select_usb_clear( void )
+clear_usb_selection( void )
 {
     io_abstraction_write( _IO_USB_ENABLE, 0 );
+    io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 1 );
 }
 
 void
-power_dut_clear( void )
+clear_dut_power( void )
 {
     for( uint8_t i = 0; i < _NUM_DUT; i++)
     {
@@ -171,12 +170,10 @@ power_dut_clear( void )
 }
 
 void
-select_serial_clear( void )
+clear_dut_selection( void )
 {
-    io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 0 );
-    io_abstraction_write( _IO_MATRIX_COLLAPSE_ENABLE, 0 );
+    io_abstraction_write( _IO_MATRIX_EXPAND_ENABLE, 1 );
 }
-
 
 /* -------------------------------------------------------------------------- */
 
@@ -219,17 +216,17 @@ dut_port_mux_mapping( DUT_NAMES port )
         case _PORT_DUT_1:
             return _MUX_DUT_1;
         case _PORT_DUT_2:
-            return _MUX_DUT_5;
-        case _PORT_DUT_3:
-            return _MUX_DUT_6;
-        case _PORT_DUT_4:
             return _MUX_DUT_2;
-        case _PORT_DUT_5:
-            return _MUX_DUT_7;
-        case _PORT_DUT_6:
+        case _PORT_DUT_3:
             return _MUX_DUT_3;
-        case _PORT_DUT_7:
+        case _PORT_DUT_4:
             return _MUX_DUT_4;
+        case _PORT_DUT_5:
+            return _MUX_DUT_5;
+        case _PORT_DUT_6:
+            return _MUX_DUT_6;
+        case _PORT_DUT_7:
+            return _MUX_DUT_7;
         case _PORT_DUT_8:
             return _MUX_DUT_8;
         default:
