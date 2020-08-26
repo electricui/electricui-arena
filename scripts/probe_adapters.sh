@@ -7,7 +7,7 @@ diff_port () {
 	curl -X POST $BOARD_URL/adapter -d $1
 	sleep 0.5
 	adapter=$(lsusb)
-	diff -u <(echo "$reference" ) <(echo "$adapter") | grep -v "^---" | grep -v "^[0-9c0-9]"
+	diff <(echo "$reference" ) <(echo "$adapter") | grep -v "^---" | grep -v "^[0-9c0-9]"
 }
 
 
