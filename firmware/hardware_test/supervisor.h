@@ -31,3 +31,14 @@ void
 supervisor_user_change_target( void );
 
 /* -------------------------------------------------------------------------- */
+
+void
+supervisor_indicate_critical( void );
+
+void
+supervisor_indicate_success( void );
+
+void
+supervisor_indicate_warning( void );
+
+/* -------------------------------------------------------------------------- */

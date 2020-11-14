@@ -112,25 +112,39 @@ void setup_ethernet( void )
 {
     Ethernet.init(33);
 
-    Serial.println("Ethernet WebServer Example");
+    Serial.println("Ethernet WebServer Starting");
 
     // start the Ethernet connection and the server:
     Ethernet.begin(mac);
 
     // Check for Ethernet hardware present
-    if (Ethernet.hardwareStatus() == EthernetNoHardware) 
+    if(Ethernet.hardwareStatus() == EthernetNoHardware ) 
     {
         Serial.println("Ethernet hardware not found!");
         while (1)
         {
-            // TODO flash error codes, retry
+            supervisor_indicate_critical();
             delay(1); 
         }
     }
 
-    if (Ethernet.linkStatus() == LinkOFF) 
+    switch( Ethernet.linkStatus() )
     {
-        Serial.println("Ethernet cable is not connected.");
+        case Unknown:
+            Serial.println("Ethernet link status unknown");
+            supervisor_indicate_warning();
+            delay(1); 
+        break;
+
+        case LinkOFF:
+            Serial.println("Ethernet cable is not connected.");
+            supervisor_indicate_warning();
+            delay(1); 
+        break;
+
+        case LinkON:
+            supervisor_indicate_success();
+        break;
     }
 
     // start the server
@@ -138,7 +152,6 @@ void setup_ethernet( void )
 
     Serial.print("Got IP: ");
     Serial.println(Ethernet.localIP());
-
 
     EthernetBonjour.begin("arena");
     EthernetBonjour.addServiceRecord("hardwaretest._http", 80, MDNSServiceTCP);

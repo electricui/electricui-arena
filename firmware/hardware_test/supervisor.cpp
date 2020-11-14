@@ -485,4 +485,33 @@ supervisor_user_change_target( void )
 
 }
 /* -------------------------------------------------------------------------- */
+
+void
+supervisor_indicate_critical( void )
+{
+    io_status_red( true );
+    io_status_yellow( true );
+    io_status_green( true );
+
+    delay(100);
+
+    io_status_red( false );
+    io_status_yellow( false );
+    io_status_green( false );
+
+    delay(100);
+}
+
+void
+supervisor_indicate_success( void )
+{
+    io_status_green( true );
+}
+
+void
+supervisor_indicate_warning( void )
+{
+    io_status_yellow( true );
+}
+
 /* -------------------------------------------------------------------------- */
