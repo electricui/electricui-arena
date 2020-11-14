@@ -23,3 +23,11 @@ char *
 supervisor_parse_get( const char * key, const char * value );
 
 /* -------------------------------------------------------------------------- */
+
+void 
+supervisor_user_change_adapter( void );
+
+void
+supervisor_user_change_target( void );
+
+/* -------------------------------------------------------------------------- */

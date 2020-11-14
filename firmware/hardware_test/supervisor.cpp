@@ -48,7 +48,6 @@ named_hardware adapters[] =
     { _PORT_USB_F, "f", "" },
     { _PORT_USB_G, "g", "" },
     { _PORT_USB_H, "h", "" },
-
 };
 
 named_hardware targets[] = 
@@ -440,4 +439,50 @@ supervisor_parse_get( const char * key, const char * value )
     return NULL;
 }
 
+/* -------------------------------------------------------------------------- */
+
+uint8_t user_selected_adapter = 0;
+uint8_t user_selected_device  = 0;
+
+void 
+supervisor_user_change_adapter( void )
+{
+    user_selected_adapter++;
+
+    if( user_selected_adapter >= _NUM_USB_PORTS)
+    {
+        user_selected_adapter = 0;
+    }
+
+    USBPORT_NAMES selected = (USBPORT_NAMES)adapters[user_selected_adapter].index;
+
+    clear_usb_power();
+    clear_usb_selection();
+
+    select_usb_port( selected );
+    select_serial_source( selected);
+    power_usb_port( selected, true);
+
+}
+
+void
+supervisor_user_change_target( void )
+{
+    user_selected_device++;
+
+    if( user_selected_device >= _NUM_DUT)
+    {
+        user_selected_device = 0;
+    }
+
+    DUT_NAMES selected = (DUT_NAMES)targets[user_selected_device].index;
+
+    clear_dut_power();
+    clear_dut_selection();
+
+    select_serial_dut( selected );
+    power_dut( selected, true );
+
+}
+/* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
