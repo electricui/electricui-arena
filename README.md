@@ -1,5 +1,5 @@
 # Electric UI CI Arena
-Hardware for continuous integration testing of serial interfaces and microcontrollers.
+Hardware for continuous integration testing of serial interfaces and microcontrollers. [Background and more detailed discussion outlined in this blog post](https://electricui.com/blog/hardware-testing).
 
 ![PCB Render with annotations](images/pcb-annotated.jpg)
 
@@ -35,7 +35,7 @@ The following boards are used as test devices:
 - [RISC-V FE310](https://www.sparkfun.com/products/15799) with Zephyr RTOS
 - [Ambiq Apollo3 ARM-M4F (Sparkfun Artemis)](https://www.sparkfun.com/products/15574) 
 - [Espressif ESP32](https://www.sparkfun.com/products/15663) with ESP-IDF
-- [Teensy 3.2](https://www.pjrc.com/store/teensy32.html) & [Teensy/Feather adaptor](Teensy/Feather adaptor) with Arduino
+- [Teensy 3.2](https://www.pjrc.com/store/teensy32.html) & [Teensy-Feather adaptor](https://www.adafruit.com/product/3200) with Arduino
 
 Test hardware will be flashed with a mix of native 'bare metal' images, and at least one target will act as validation of the Arduino framework.
 
